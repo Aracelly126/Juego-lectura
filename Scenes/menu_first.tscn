@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cafaqy8ce2rla"]
+[gd_scene load_steps=3 format=3 uid="uid://cafaqy8ce2rla"]
 
 [ext_resource type="Texture2D" uid="uid://6pfx5l4b01k0" path="res://Resources/Menu/FondoInicioTitulo.png" id="1_fgp8h"]
+[ext_resource type="Texture2D" uid="uid://pokrb4k734td" path="res://Resources/Menu/BotonPlay.png" id="2_eq4t5"]
 
 [node name="Menu-first" type="Node2D"]
 
@@ -9,3 +10,12 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_fgp8h")
 expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 441.0
+offset_top = 484.0
+offset_right = 705.0
+offset_bottom = 562.0
+texture_normal = ExtResource("2_eq4t5")
+ignore_texture_size = true
+stretch_mode = 5
