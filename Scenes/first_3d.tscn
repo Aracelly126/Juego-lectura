@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ulbcxmat2uc8"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_jqubd"]
+
+[node name="First-3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PrismMesh_jqubd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08920282, 0.17511773, 2.1881375)
