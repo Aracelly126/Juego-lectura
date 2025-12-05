@@ -4,16 +4,21 @@
 [ext_resource type="Script" uid="uid://bcm3el6222wnd" path="res://Scenes/menu_first.gd" id="1_kn2jb"]
 [ext_resource type="Texture2D" uid="uid://pokrb4k734td" path="res://Resources/Menu/BotonPlay.png" id="2_eq4t5"]
 
-[node name="Menu-first" type="Node2D"]
+[node name="Menu-first" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_kn2jb")
 
 [node name="background_image" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_fgp8h")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="button_play" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 441.0
 offset_top = 484.0
 offset_right = 705.0
