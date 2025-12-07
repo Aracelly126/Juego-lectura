@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://ulbcxmat2uc8"]
 
 [ext_resource type="PackedScene" uid="uid://cul825lramx12" path="res://Scenes/menu_pausa.tscn" id="1_kte3u"]
-[ext_resource type="Script" uid="uid://dgpeurgi64np0" path="res://Scenes/player-first3d.gd" id="1_qkeoe"]
+[ext_resource type="Script" uid="uid://dgpeurgi64np0" path="res://Scripts/player-first3d.gd" id="1_qkeoe"]
 [ext_resource type="Texture2D" uid="uid://bmvl0soorte0h" path="res://Resources/Generals/character-principal/Skins/humanMaleA.png" id="2_hn5xf"]
 [ext_resource type="PackedScene" uid="uid://gxepae4252qh" path="res://Resources/first_3d/Mountains/mountain_low_poly.glb" id="4_34852"]
 [ext_resource type="Texture2D" uid="uid://c331nygxcidqr" path="res://Resources/first_3d/Rocks/Rock Medium-s1OJ3bBzqc_Rocks_Diffuse.png" id="4_kte3u"]
@@ -66,14 +66,14 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 
 [node name="First-3D" type="Node3D"]
 
-[node name="MenuPausa" parent="." instance=ExtResource("1_kte3u")]
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, -3.5765524, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qkeoe")
+
+[node name="MenuPausa" parent="." instance=ExtResource("1_kte3u")]
 
 [node name="Cloud1" parent="." instance=ExtResource("7_jqkit")]
 transform = Transform3D(0.42419943, 0, -0.9055688, 0, 1, 0, 0.9055688, 0, 0.42419943, 90.5737, -27.904972, -206.94604)
