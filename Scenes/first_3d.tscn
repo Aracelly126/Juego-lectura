@@ -1120,23 +1120,30 @@ shape = SubResource("ConcavePolygonShape3D_sl0cq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.31399, 0, 5.716172)
 
 [node name="_hierva" parent="Hiervita" instance=ExtResource("8_wdyji")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3012183)
+transform = Transform3D(0.688152, 0, 0.72556657, 0, 1, 0, -0.72556657, 0, 0.688152, -5.398468, 0, -1.6799788)
 
 [node name="_hiervita1" parent="Hiervita" instance=ExtResource("9_pc7vl")]
-transform = Transform3D(0.25256348, 0, -0.16190022, 0, 0.29999998, 0, 0.16190022, 0, 0.25256348, 0, 0, -2.2964988)
+transform = Transform3D(0.25256348, 0, -0.16190022, 0, 0.29999998, 0, 0.16190022, 0, 0.25256348, -10.630547, 0, -1.4805799)
 
 [node name="_hierva2" type="Node3D" parent="Hiervita"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.187046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4057693, 0, -5.734342)
 
 [node name="green-material" type="MeshInstance3D" parent="Hiervita/_hierva2"]
 mesh = SubResource("ArrayMesh_w3h3e")
 skeleton = NodePath("")
 
 [node name="_hierva3" type="Node3D" parent="Hiervita"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.94329)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5170608)
 
 [node name="yellow-material" type="MeshInstance3D" parent="Hiervita/_hierva3"]
 mesh = SubResource("ArrayMesh_8ktjt")
+skeleton = NodePath("")
+
+[node name="_hierva5" type="Node3D" parent="Hiervita"]
+transform = Transform3D(0.46235228, 0, -0.88669634, 0, 1, 0, 0.88669634, 0, 0.46235228, -6.6053467, 0, -5.734342)
+
+[node name="green-material" type="MeshInstance3D" parent="Hiervita/_hierva5"]
+mesh = SubResource("ArrayMesh_w3h3e")
 skeleton = NodePath("")
 
 [node name="_hierva4" type="Node3D" parent="Hiervita"]
@@ -1147,7 +1154,7 @@ mesh = SubResource("ArrayMesh_t1454")
 skeleton = NodePath("")
 
 [node name="_hiervita-chiquita1" type="Node3D" parent="Hiervita"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.494118, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4941177, 0, -4.4699574)
 
 [node name="green-material2" type="MeshInstance3D" parent="Hiervita/_hiervita-chiquita1"]
 mesh = SubResource("ArrayMesh_h4iua")
@@ -1186,6 +1193,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8184686, 0, 0)
 
 [node name="yellow-material3" type="MeshInstance3D" parent="Hiervita/_hiervita-chiquita5"]
 mesh = SubResource("ArrayMesh_v1wuq")
+skeleton = NodePath("")
+
+[node name="_hierva6" type="Node3D" parent="Hiervita"]
+transform = Transform3D(0.80938613, 0, -0.5872768, 0, 1, 0, 0.5872768, 0, 0.80938613, -5.9941483, 0, -6.2239075)
+
+[node name="green-material" type="MeshInstance3D" parent="Hiervita/_hierva6"]
+mesh = SubResource("ArrayMesh_w3h3e")
+skeleton = NodePath("")
+
+[node name="_hierva7" type="Node3D" parent="Hiervita"]
+transform = Transform3D(0.13768655, 0, -0.990476, 0, 1, 0, 0.990476, 0, 0.13768655, -6.924301, 0, -6.618743)
+
+[node name="green-material" type="MeshInstance3D" parent="Hiervita/_hierva7"]
+mesh = SubResource("ArrayMesh_w3h3e")
+skeleton = NodePath("")
+
+[node name="_hierva8" type="Node3D" parent="Hiervita"]
+transform = Transform3D(-0.65449023, 0, -0.75607055, 0, 1, 0, 0.75607055, 0, -0.65449023, -11.94619, 0, -10.199761)
+
+[node name="green-material" type="MeshInstance3D" parent="Hiervita/_hierva8"]
+mesh = SubResource("ArrayMesh_w3h3e")
+skeleton = NodePath("")
+
+[node name="_hierva9" type="Node3D" parent="Hiervita"]
+transform = Transform3D(0.7268984, 0, 0.68674505, 0, 1, 0, -0.68674505, 0, 0.7268984, -0.57038116, 0, -3.5170608)
+
+[node name="yellow-material" type="MeshInstance3D" parent="Hiervita/_hierva9"]
+mesh = SubResource("ArrayMesh_8ktjt")
+skeleton = NodePath("")
+
+[node name="_hierva10" type="Node3D" parent="Hiervita"]
+transform = Transform3D(0.056832165, 0, 0.99838376, 0, 1, 0, -0.99838376, 0, 0.056832165, -0.2608719, 0, -4.31931)
+
+[node name="yellow-material" type="MeshInstance3D" parent="Hiervita/_hierva10"]
+mesh = SubResource("ArrayMesh_8ktjt")
 skeleton = NodePath("")
 
 [node name="Little rocks" type="Node3D" parent="."]
@@ -2036,11 +2078,199 @@ transform = Transform3D(-0.08402565, 0, 0.99646366, 0, 1, 0, -0.99646366, 0, -0.
 mesh = SubResource("ArrayMesh_v1wuq")
 skeleton = NodePath("")
 
+[node name="_hiervita-chiquita12" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.78534937, 0, 0.61905295, 0, 1, 0, -0.61905295, 0, -0.78534937, 73.721855, 0, -28.995785)
+
+[node name="green-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita12"]
+transform = Transform3D(0.9776515, 0, 0.21023294, 0, 1, 0, -0.21023294, 0, 0.9776515, 0.0037460327, 0, -0.010709763)
+mesh = SubResource("ArrayMesh_h4iua")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita13" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.32551858, 0, 0.9455358, 0, 1, 0, -0.9455358, 0, -0.32551858, 74.48824, 0, -27.477852)
+
+[node name="green-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita13"]
+mesh = SubResource("ArrayMesh_v4vhy")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita14" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.5802198, 0, -0.8144603, 0, 1, 0, 0.8144603, 0, 0.5802198, 71.87768, 0, -27.76187)
+
+[node name="mid-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita14"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pybvt")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita15" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.94993937, 0, -0.31243443, 0, 1, 0, 0.31243443, 0, -0.94993937, 72.71182, 0, -29.144447)
+
+[node name="mid-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita15"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+mesh = SubResource("ArrayMesh_w4jbs")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita16" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.5460435, 0, -0.8377568, 0, 1, 0, 0.8377568, 0, -0.5460435, 72.16705, 0, -28.850723)
+
+[node name="yellow-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita16"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_k10a6")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita17" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.98567706, 0, 0.16864422, 0, 1, 0, -0.16864422, 0, 0.98567706, 74.49274, 0, -28.111233)
+
+[node name="yellow-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita17"]
+transform = Transform3D(-0.08402565, 0, 0.99646366, 0, 1, 0, -0.99646366, 0, -0.08402565, -0.08770752, 0, -0.03858185)
+mesh = SubResource("ArrayMesh_v1wuq")
+skeleton = NodePath("")
+
 [node name="Root Scene14" parent="Medium rocks" instance=ExtResource("27_fowks")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 3.421238, -0.1, -38.58952)
 
+[node name="_hiervita-chiquita18" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.7106644, 0, 0.70353115, 0, 1, 0, -0.70353115, 0, -0.7106644, 4.4740825, 0, -39.294704)
+
+[node name="green-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita18"]
+mesh = SubResource("ArrayMesh_h4iua")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita19" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.82733554, 0, 0.561708, 0, 1, 0, -0.561708, 0, 0.82733554, 4.089701, 0, -37.611366)
+
+[node name="green-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita19"]
+mesh = SubResource("ArrayMesh_v4vhy")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita20" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.08108607, 0, -0.9967072, 0, 1, 0, 0.9967072, 0, 0.08108607, 1.9673567, 0, -38.90498)
+
+[node name="mid-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita20"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pybvt")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita21" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.9976949, 0, 0.06785851, 0, 1, 0, -0.06785851, 0, -0.9976949, 3.3129432, 0, -39.71895)
+
+[node name="mid-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita21"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+mesh = SubResource("ArrayMesh_w4jbs")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita22" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.83982843, 0, -0.542852, 0, 1, 0, 0.542852, 0, -0.83982843, 2.434849, 0, -39.530125)
+
+[node name="yellow-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita22"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_k10a6")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita23" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.95305866, 0, -0.30278575, 0, 1, 0, 0.30278575, 0, 0.95305866, 4.5653024, 0, -38.064224)
+
+[node name="yellow-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita23"]
+transform = Transform3D(-0.08402565, 0, 0.9964636, 0, 1, 0, -0.9964636, 0, -0.08402565, -0.021133423, 0, -0.06652641)
+mesh = SubResource("ArrayMesh_v1wuq")
+skeleton = NodePath("")
+
 [node name="Root Scene15" parent="Medium rocks" instance=ExtResource("26_15fcv")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -10.857079, -0.1, 39.302723)
+
+[node name="_hiervita-chiquita24" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.65027046, 0, 0.75970274, 0, 1, 0, -0.75970274, 0, -0.65027046, -9.76392, 0, 39.08616)
+
+[node name="green-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita24"]
+mesh = SubResource("ArrayMesh_h4iua")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita25" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.85625803, 0, 0.5165482, 0, 1, 0, -0.5165482, 0, 0.85625803, -10.185766, 0, 40.675674)
+
+[node name="green-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita25"]
+mesh = SubResource("ArrayMesh_v4vhy")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita26" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.47691327, 0, -0.8789504, 0, 1, 0, 0.8789504, 0, 0.47691327, -12.254223, 0, 39.63813)
+
+[node name="mid-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita26"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pybvt")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita27" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.9829385, 0, 0.18393412, 0, 1, 0, -0.18393412, 0, -0.9829385, -10.908636, 0, 38.20826)
+
+[node name="mid-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita27"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+mesh = SubResource("ArrayMesh_w4jbs")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita28" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.40236327, 0, -0.91548014, 0, 1, 0, 0.91548014, 0, -0.40236327, -11.956887, 0, 38.552814)
+
+[node name="yellow-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita28"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_k10a6")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita29" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.83296955, 0, -0.55331886, 0, 1, 0, 0.55331886, 0, 0.83296955, -9.656277, 0, 40.062744)
+
+[node name="yellow-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita29"]
+transform = Transform3D(-0.08402565, 0, 0.9964636, 0, 1, 0, -0.9964636, 0, -0.08402565, -0.021133423, 0, -0.06652641)
+mesh = SubResource("ArrayMesh_v1wuq")
+skeleton = NodePath("")
+
+[node name="Root Scene16" parent="Medium rocks" instance=ExtResource("26_15fcv")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 5.1173153, -0.1, 56.967224)
+
+[node name="_hiervita-chiquita30" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.6147946, 0, 0.78868717, 0, 1, 0, -0.78868717, 0, -0.6147946, 6.1521635, 0, 56.767185)
+
+[node name="green-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita30"]
+mesh = SubResource("ArrayMesh_h4iua")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita31" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.9227938, 0, 0.38529408, 0, 1, 0, -0.38529408, 0, 0.9227938, 5.730317, 0, 58.3567)
+
+[node name="green-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita31"]
+mesh = SubResource("ArrayMesh_v4vhy")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita32" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.1403136, 0, -0.9901072, 0, 1, 0, 0.9901072, 0, 0.1403136, 3.7512674, 0, 57.480225)
+
+[node name="mid-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita32"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pybvt")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita33" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.9829385, 0, 0.18393412, 0, 1, 0, -0.18393412, 0, -0.9829385, 5.0074472, 0, 55.9532)
+
+[node name="mid-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita33"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0, 0)
+mesh = SubResource("ArrayMesh_w4jbs")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita34" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(-0.7237023, 0, -0.69011223, 0, 1, 0, 0.69011223, 0, -0.7237023, 3.959196, 0, 56.31958)
+
+[node name="yellow-material2" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita34"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("ArrayMesh_k10a6")
+skeleton = NodePath("")
+
+[node name="_hiervita-chiquita35" type="Node3D" parent="Medium rocks"]
+transform = Transform3D(0.83296955, 0, -0.55331886, 0, 1, 0, 0.55331886, 0, 0.83296955, 6.2598066, 0, 57.74377)
+
+[node name="yellow-material3" type="MeshInstance3D" parent="Medium rocks/_hiervita-chiquita35"]
+transform = Transform3D(-0.08402565, 0, 0.9964636, 0, 1, 0, -0.9964636, 0, -0.08402565, -0.021133423, 0, -0.06652641)
+mesh = SubResource("ArrayMesh_v1wuq")
+skeleton = NodePath("")
 
 [node name="Ways" type="Node3D" parent="."]
 
