@@ -1,25 +1,36 @@
 extends Node3D
 
 # --- CONFIGURACIÓN DE CONTENIDO (Editable en el Inspector) ---
-@export_group("Contenido del Libro")
-@export_multiline var texto_pagina_izquierda: String = "Texto de la página 1..."
-@export_multiline var texto_pagina_derecha: String = "Texto de la página 2..."
+@export_category("Contenido del Libro")
 
-# --- NUEVO: CONFIGURACIÓN VISUAL ---
+@export_group("Página Izquierda")
+@export var izq_usar_imagen: bool = false
+@export_multiline var izq_texto: String = "Texto de la página izquierda..."
+@export var izq_textura: Texture2D
+
+@export_group("Página Derecha")
+@export var der_usar_imagen: bool = false
+@export_multiline var der_texto: String = "Texto de la página derecha..."
+@export var der_textura: Texture2D
+
+# --- CONFIGURACIÓN VISUAL ---
 @export_group("Apariencia")
-# Esto crea un selector de color en el editor. Por defecto es amarillo/dorado.
 @export var color_del_brillo: Color = Color(1, 0.8, 0.2) 
 
-# --- REFERENCIAS ---
+# --- REFERENCIAS DE ESCENA ---
 @onready var animation_player = $AnimationPlayer 
 @onready var area_detectora = $Area3D
 @onready var mensaje_flotante = $Label3D 
-@onready var luz_brillo = $OmniLight3D # Tu luz mágica
+@onready var luz_brillo = $OmniLight3D
 
-# Referencias a la INTERFAZ 2D
+# --- REFERENCIAS A LA INTERFAZ 2D (LECTURA) ---
 @onready var capa_lectura = $CanvasLayer
+# Referencias de Texto
 @onready var label_izquierda = $CanvasLayer/Control/TextoIzquierda
 @onready var label_derecha = $CanvasLayer/Control/TextoDerecha
+# Referencias de Imagen (¡Nuevas!)
+@onready var img_izquierda = $CanvasLayer/Control/ImagenIzquierda
+@onready var img_derecha = $CanvasLayer/Control/ImagenDerecha
 
 # --- CONFIGURACIÓN DE POSICIÓN ---
 var posicion_lectura = Vector3(-0.4, -0.2, -0.5) 
@@ -43,11 +54,10 @@ func _ready():
 	if mensaje_flotante: mensaje_flotante.visible = false
 	if capa_lectura: capa_lectura.visible = false 
 	
-	# Cargar textos
-	if label_izquierda: label_izquierda.text = texto_pagina_izquierda
-	if label_derecha: label_derecha.text = texto_pagina_derecha
+	# --- CONFIGURAR EL CONTENIDO DE LAS PÁGINAS ---
+	actualizar_paginas()
 	
-	# --- NUEVO: APLICAR EL COLOR ELEGIDO A LA LUZ ---
+	# Aplicar color de luz
 	if luz_brillo:
 		luz_brillo.light_color = color_del_brillo
 	
@@ -55,6 +65,32 @@ func _ready():
 	if area_detectora:
 		area_detectora.body_entered.connect(_on_body_entered)
 		area_detectora.body_exited.connect(_on_body_exited)
+
+# Función nueva para manejar qué se muestra
+func actualizar_paginas():
+	# --- LÓGICA IZQUIERDA ---
+	if izq_usar_imagen:
+		if label_izquierda: label_izquierda.visible = false
+		if img_izquierda:
+			img_izquierda.visible = true
+			img_izquierda.texture = izq_textura
+	else:
+		if img_izquierda: img_izquierda.visible = false
+		if label_izquierda:
+			label_izquierda.visible = true
+			label_izquierda.text = izq_texto
+
+	# --- LÓGICA DERECHA ---
+	if der_usar_imagen:
+		if label_derecha: label_derecha.visible = false
+		if img_derecha:
+			img_derecha.visible = true
+			img_derecha.texture = der_textura
+	else:
+		if img_derecha: img_derecha.visible = false
+		if label_derecha:
+			label_derecha.visible = true
+			label_derecha.text = der_texto
 
 func _process(delta):
 	# 1. MOVIMIENTO (Si está abierto)
@@ -77,7 +113,6 @@ func _process(delta):
 	# 2. BRILLO PULSANTE (Si está cerrado)
 	elif luz_brillo:
 		tiempo_brillo += delta * 2.0
-		# Oscila la intensidad sin cambiar el color
 		luz_brillo.light_energy = 2.0 + sin(tiempo_brillo) * 1.0
 
 func _input(event):

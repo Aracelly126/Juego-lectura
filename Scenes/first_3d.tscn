@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://ulbcxmat2uc8"]
+[gd_scene load_steps=62 format=4 uid="uid://ulbcxmat2uc8"]
 
 [ext_resource type="PackedScene" uid="uid://cul825lramx12" path="res://Scenes/menu_pausa.tscn" id="1_kte3u"]
 [ext_resource type="Script" uid="uid://dgpeurgi64np0" path="res://Scripts/player-first3d.gd" id="1_qkeoe"]
@@ -12,7 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://c13hoj42ijfvv" path="res://Resources/first_3d/Grass/grass_pack_lp_1.png" id="11_wqkch"]
 [ext_resource type="Texture2D" uid="uid://cd3b6ji8pk1jj" path="res://Resources/first_3d/Grass/grass_pack_lp_0.png" id="12_ejvt1"]
 [ext_resource type="Texture2D" uid="uid://bldc3u5iuslbp" path="res://Resources/first_3d/Grass/grass_pack_lp_2.png" id="13_gkbiy"]
+[ext_resource type="Texture2D" uid="uid://7tf4smg1cq4r" path="res://Resources/first_3d/Imagenes_libros/imagen1_libro1.jpeg" id="23_fj2lo"]
+[ext_resource type="Texture2D" uid="uid://cb6ma3287nmvd" path="res://Resources/first_3d/Imagenes_libros/tesoro-inca.jpg" id="24_g752b"]
+[ext_resource type="Texture2D" uid="uid://c6x7a0bb4n0vd" path="res://Resources/first_3d/Imagenes_libros/Imagen-final-libros.jpg" id="24_qi1nd"]
 [ext_resource type="PackedScene" uid="uid://bmht0g8k3pfyh" path="res://Resources/first_3d/Rocks/Rock Medium-JQxF95498B.glb" id="25_3br0j"]
+[ext_resource type="Texture2D" uid="uid://cc3y5rjostkst" path="res://Resources/first_3d/Imagenes_libros/paramo-llanganates.jpeg" id="25_xb5ib"]
 [ext_resource type="PackedScene" uid="uid://dtwq5ot2ak1ds" path="res://Resources/first_3d/Rocks/Rock Medium-s1OJ3bBzqc.glb" id="26_15fcv"]
 [ext_resource type="PackedScene" uid="uid://bx7ahgvujy87l" path="res://Resources/first_3d/Rocks/Rock Medium.glb" id="27_fowks"]
 [ext_resource type="PackedScene" uid="uid://djlhximrm0t5k" path="res://Resources/first_3d/Rocks/Rock Path Round Thin.glb" id="28_trh22"]
@@ -3565,7 +3569,7 @@ mesh = SubResource("ArrayMesh_v1wuq")
 skeleton = NodePath("")
 
 [node name="Root Scene15" parent="Medium rocks" instance=ExtResource("26_15fcv")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 29.994572, -0.5804311, 15.01035)
+transform = Transform3D(1.499903, 0.017048601, -0.0008332191, -0.017068949, 1.4981147, -0.0732176, 0, 0.07322234, 1.4982116, 29.994572, -0.5804311, 15.01035)
 
 [node name="_hiervita-chiquita24" type="Node3D" parent="Medium rocks"]
 transform = Transform3D(-0.65027046, 0, 0.75970274, 0, 1, 0, -0.75970274, 0, -0.65027046, 31.006393, 0.23292595, 14.254288)
@@ -3935,34 +3939,51 @@ transform = Transform3D(-0.99958277, 0, 0.028881192, 0, 1, 0, -0.028881192, 0, -
 [node name="Root Scene108" parent="Ways" instance=ExtResource("29_gu6fl")]
 transform = Transform3D(-0.99945766, 0, -0.032928396, 0, 1, 0, 0.032928396, 0, -0.99945766, -7.3238316, -0.05, -17.48492)
 
-[node name="book1" parent="." instance=ExtResource("30_wdyji")]
+[node name="Books" type="Node3D" parent="."]
+
+[node name="book1" parent="Books" instance=ExtResource("30_wdyji")]
 transform = Transform3D(-0.07361661, -0.014319418, -0.0007412171, -0.004795044, 0.028239444, -0.06931479, 0.013513057, -0.06798888, -0.028634058, 77.86987, 0.8165933, 17.702457)
-texto_pagina_izquierda = "En 1532, Atahualpa fue capturado por Francisco Pizarro en Cajamarca, y para recuperar su libertad ordenó reunir un rescate nunca antes visto: toneladas de oro y plata provenientes de todo el Tahuantinsuyo. Cronistas como Cieza de León y Pedro Pizarro relataron cómo caravanas enteras cruzaban montañas y senderos imposibles cargando objetos ceremoniales, lingotes y piezas de gran valor. Parte de ese rescate avanzó hacia Quito bajo la responsabilidad del general Rumiñahui, quien intentaba proteger los bienes del emperador mientras el Imperio se desmoronaba."
-texto_pagina_derecha = "El viaje comienza con dudas, pero también con una certeza: algo espera en lo profundo del bosque, algo real. No son guardianes invisibles ni voces en la oscuridad; es la historia misma empujándote hacia adelante. El anciano que te entregó el quipu habló de propósito, no de fortuna, y esas palabras te acompañan mientras caminas hacia el sendero que casi nadie recorre.
+izq_texto = "Tras la captura de Atahualpa, se cuenta que el tesoro del Inca fue escondido en estas montañas, para que nadie pudiera robarlo. Oro, plata y objetos sagrados fueron ocultos, y solo aquellos que comprendieran la historia podrían hallarlos.
+Observa con atención: las piedras cubiertas de musgo y con formas especiales son señales que te guiarán. La primera pista está en la piedra que refleja la forma de un antiguo objeto del tesoro, tal como los guardianes de la historia lo dejaron.\"
+Pista: Seguir el patrón de piedras con marcas o símbolos, la siguiente piedra contiene el siguiente libro."
+der_usar_imagen = true
+der_textura = ExtResource("23_fj2lo")
 
-Cada paso confirma que el tesoro no es solo un botín, sino un eco de decisiones antiguas que aún no han sido entendidas."
-
-[node name="book2" parent="." instance=ExtResource("30_wdyji")]
+[node name="book2" parent="Books" instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.06901457, 0.02849301, 0.007080617, -0.0010560467, 0.020485085, -0.07214043, -0.029340617, 0.06628354, 0.01925146, 66.70986, 1.2523979, 11.375157)
-texto_pagina_izquierda = "Con la muerte de Atahualpa, los testimonios sobre la ruta del rescate se volvieron contradictorios. Unos aseguraban que Rumiñahui lo escondió en lagunas altas; otros, que lo enterró en cuevas inaccesibles. Las anotaciones del español Juan de Salinas y Loyola, quien exploró la zona en 1545, mencionan parajes difíciles, lluvias constantes y senderos que parecían diseñados para confundir. Los Llanganates comenzaron a tomar fama de lugar donde “todo se pierde”: personas, caminos, incluso los mismos mapas."
-texto_pagina_derecha = "A lo largo de los siglos, expediciones reales documentadas —como la de Manuel Pando en el siglo XVIII o la de Valverde en 1860— añadieron más piezas al rompecabezas. Algunas encontraron ruinas dispersas; otras, rastros de antiguos caminos. Ninguna consiguió pruebas definitivas. Este historial es la base de tu recorrido: no sigues leyendas inventadas, sino registros reales de quienes intentaron reconstruir la ruta final del tesoro."
+izq_texto = "Hace siglos, los pobladores del páramo conocían rutas ocultas que atravesaban quebradas y rocas gigantes. Estos caminos eran vitales para proteger los secretos del Inca y sus tesoros. 
+
+Cada piedra podía advertir del peligro o señalar la dirección correcta, y algunos incluso estaban marcadas con símbolos que representaban objetos sagrados o el sol y la luna."
+der_texto = "Las leyendas cuentan que los mensajeros del Inca recorrían estos caminos para llevar información importante sin ser detectados. Ahora, José, tu misión es similar: debes interpretar las señales de las piedras y el musgo para avanzar, aprendiendo la historia mientras descubres cada pista"
 color_del_brillo = Color(0.0030078832, 3.9467217e-05, 0.89840245, 1)
 
-[node name="book3" parent="." instance=ExtResource("30_wdyji")]
+[node name="book3" parent="Books" instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.067443, 0.021225147, 0.025018683, 0.011205848, 0.03885027, -0.063167065, -0.030836185, 0.060540445, 0.03176445, 47.0324, 0.9684355, 3.0044258)
-texto_pagina_izquierda = "Revisando crónicas, mapas coloniales y testimonios de pueblos cercanos, reconstruyes el trayecto que Rumiñahui pudo seguir mientras huía hacia Quito para organizar la resistencia. Se sabe que destruyó caminos, movió tropas y ocultó registros para confundir al enemigo. También existen documentos judiciales españoles donde él fue torturado para revelar el paradero del tesoro, pero nunca confesó. Ese silencio ha sido una de las claves más importantes para los historiadores."
-texto_pagina_derecha = "En este libro, avanza la investigación geográfica: rutas probables, altitudes, pasos de montaña y zonas estratégicas. No hay magia ni misterio: lo que existe es un desafío topográfico real, descrito en expedientes coloniales y en informes de las primeras expediciones republicanas. El recorrido se convierte en un estudio histórico, militar y logístico del último movimiento de un general que intentó proteger el mayor tesoro del Imperio inca."
+izq_texto = "Se dice que el tesoro de Atahualpa no solo contenía oro y plata, sino también objetos de valor espiritual, como símbolos de poder y piezas de la cultura inca. Antes de ser apresado, Atahualpa habría ordenado esconderlo en un lugar protegido por la naturaleza.
+Los relatos cuentan que los objetos estaban agrupados de manera simbólica, representando mensajes, tradiciones y consejos para el futuro.
+Observa las piedras a tu alrededor: algunas imitan la forma de estos objetos y te guían hacia la siguiente pista"
+der_usar_imagen = true
+der_texto = ""
+der_textura = ExtResource("24_g752b")
 color_del_brillo = Color(0.9014576, 0, 0.099874236, 1)
 
-[node name="book4" parent="." instance=ExtResource("30_wdyji")]
-transform = Transform3D(-0.073050335, 0.0024393818, -0.016813543, 0.014159284, 0.049761083, -0.054298647, 0.009389397, -0.05606141, -0.048928067, 29.490019, 0.1892786, 13.5197735)
-texto_pagina_izquierda = "El siglo XIX y XX dieron origen a nuevas búsquedas. Exploradores como Edward Whymper, Edgar Whymper, Julio Tello y varios ecuatorianos documentaron lagunas, cuevas y restos arqueológicos dispersos en zonas remotas. Muchos reportaron objetos prehispánicos, cerámica o estructuras de piedra, pero ninguno halló una concentración de metales preciosos que pudiera asociarse al rescate de Atahualpa. Sin embargo, la acumulación de esos hallazgos permitió delimitar zonas con mayor probabilidad histórica."
-texto_pagina_derecha = "En este tramo, tu investigación se apoya en archivos reales: diarios de viaje, informes militares, cartas de hacendados y estudios geológicos modernos. No se trata de “una ciudad perdida”, sino de entender cómo la complejidad del terreno —pantanos, neblina, lluvia perpetua, deslizamientos— pudo haber hecho desaparecer cualquier rastro físico. Los hechos históricos sugieren que, incluso si el tesoro existió, pudo terminar sepultado bajo siglos de cambios geográficos."
+[node name="book4" parent="Books" instance=ExtResource("30_wdyji")]
+transform = Transform3D(-0.073050335, 0.0024393818, -0.016813543, 0.014159284, 0.049761083, -0.054298647, 0.009389397, -0.05606141, -0.048928067, 29.490019, 0.19672304, 13.458467)
+izq_usar_imagen = true
+izq_texto = ""
+izq_textura = ExtResource("25_xb5ib")
+der_texto = "En los páramos, la naturaleza es un lenguaje antiguo. Las piedras, el musgo y su disposición guardan secretos que han pasado de generación en generación.
+Los antiguos confiaban en estas señales para proteger su cultura y los tesoros del Inca. Algunas piedras parecen alinearse de forma especial y el musgo crece más denso en ciertos lugares. Cada detalle puede revelar un mensaje o una dirección"
 
-[node name="book5" parent="." instance=ExtResource("30_wdyji")]
+[node name="book5" parent="Books" instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.043297958, 0.052962754, 0.030744659, 0.009604562, 0.03131404, -0.06746981, -0.06048172, 0.04288793, 0.0112953605, 5.2437205, 0.81688535, 20.829332)
-texto_pagina_izquierda = "Al reunir todos los testimonios, documentos judiciales, mapas y expediciones, llegas a una conclusión basada en historia, no en fantasía: el tesoro de Atahualpa existió, sí, pero su paradero final sigue siendo un rompecabezas que combina decisiones estratégicas, destrucción de rutas y una región naturalmente hostil. Lo que encuentras no es un cofre de oro, sino respuestas sobre cómo funcionó realmente el Tahuantinsuyo en sus últimos meses de vida."
-texto_pagina_derecha = "El verdadero legado no es el metal, sino el proceso histórico que rodea su desaparición: la resistencia inca, las decisiones de Rumiñahui, los errores españoles, la geografía extrema de los Llanganates y la persistencia de exploradores que buscaron durante siglos. Tu viaje concluye no con una fantasía, sino con una comprensión más profunda del contexto real que transformó un rescate imperial en el misterio histórico más grande de los Andes."
+izq_texto = "Has llegado al final, José. Aquí, la observación y la historia se unen. Los antiguos dejaron acertijos entre las piedras:
+✔ Una piedra más alta que las demás marca el paso correcto.
+✔ Tres piedras juntas esconden un mensaje antiguo.
+✔ Algunas piedras parecen repetirse: observa, compara y resuelve.
+El tesoro te espera, pero recuerda: la verdadera riqueza es el conocimiento que has reunido en el camino."
+der_usar_imagen = true
+der_textura = ExtResource("24_qi1nd")
 color_del_brillo = Color(0.8696285, 0, 0.09471998, 1)
 
 [editable path="Clouds/Cloud1"]
@@ -3978,8 +3999,8 @@ color_del_brillo = Color(0.8696285, 0, 0.09471998, 1)
 [editable path="Clouds/Cloud11"]
 [editable path="Clouds/Cloud12"]
 [editable path="Mountains/mountain2"]
-[editable path="book1"]
-[editable path="book2"]
-[editable path="book3"]
-[editable path="book4"]
-[editable path="book5"]
+[editable path="Books/book1"]
+[editable path="Books/book2"]
+[editable path="Books/book3"]
+[editable path="Books/book4"]
+[editable path="Books/book5"]
