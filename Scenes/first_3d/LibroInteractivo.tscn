@@ -538,115 +538,112 @@ radius = 20.0
 script = ExtResource("2_kplca")
 
 [node name="pine_34" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="0"]
-transform = Transform3D(0.09, 0, 0, 0, 0.025, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="cover-r_35" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="1"]
-transform = Transform3D(0.71000004, 0, 0, 0, 0.025, 0, 0, 0, 1, 0.089999996, 0.025000019, 0)
+transform = Transform3D(2.8252483e-08, 0.025, 0, -0.09, 7.847912e-09, 0, 0, 0, 1, 0.065, 0.115, 0)
 
 [node name="cover-l_36" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="2"]
-transform = Transform3D(0.71000004, 0, 0, 0, 0.025, 0, 0, 0, 1, -0.08999998, 0.025000012, 0)
+transform = Transform3D(-0.71000004, 3.774895e-09, 0, -1.0720703e-07, -0.025, 0, 0, 0, 1, 0.089999996, 0.20499998, 0)
 
 [node name="paper_39" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="3"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.089935146, 0.029508853, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.030000001, 0)
 
 [node name="paper_001_40" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="4"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.089944124, 0.034513786, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.035111908, 0)
 
 [node name="paper_002_41" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="5"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08994461, 0.03950368, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.040223815, 0)
 
 [node name="paper_003_42" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="6"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.089945786, 0.044563834, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.04533572, 0)
 
 [node name="paper_004_43" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="7"]
-transform = Transform3D(0.71000004, 2.2204459e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08995791, 0.049729113, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.050447628, 0)
 
 [node name="paper_005_44" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="8"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08997115, 0.05494829, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.055559535, 0)
 
 [node name="paper_006_45" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="9"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.0899802, 0.060195174, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.06067144, 0)
 
 [node name="paper_007_46" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="10"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08999392, 0.06552169, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.06578335, 0)
 
 [node name="paper_008_47" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="11"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08996065, 0.070260294, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.070895255, 0)
 
 [node name="paper_009_48" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="12"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08995254, 0.07566778, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.07600716, 0)
 
 [node name="paper_010_49" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="13"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08995001, 0.08088994, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.08111906, 0)
 
 [node name="paper_011_50" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="14"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08988007, 0.0858079, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.08623096, 0)
 
 [node name="paper_012_51" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="15"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08990465, 0.09106134, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.09134287, 0)
 
 [node name="paper_013_52" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="16"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08980181, 0.09594131, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.09645477, 0)
 
 [node name="paper_014_53" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="17"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08985559, 0.101228446, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.10156667, 0)
 
 [node name="paper_015_54" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="18"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08971702, 0.106067196, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.106678575, 0)
 
 [node name="paper_016_55" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="19"]
-transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.08980232, 0.111390695, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.11179048, 0)
 
 [node name="paper_017_56" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="20"]
-transform = Transform3D(-0.68053156, 1.553401e-07, 0.2851089, 0.20242733, -3.523388e-07, 0.95849514, 1.7703682e-07, 1, 2.9342615e-07, -0.073788464, 0.08513146, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.11690238, 0)
 
 [node name="paper_018_57" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="21"]
-transform = Transform3D(-0.7043016, -1.0001633e-06, 0.12644206, 0.08977387, -2.3162298e-07, 0.991974, -6.836228e-07, 1, 3.5622668e-07, -0.083476394, 0.09552091, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.122014284, 0)
 
 [node name="paper_019_58" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="22"]
-transform = Transform3D(-0.70971954, 2.1072765e-06, 0.02810628, 0.019955462, -4.770038e-07, 0.9996049, 1.5050944e-06, 1, 4.1758764e-07, -0.08848639, 0.09989089, 0)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705876e-24, 0, -4.371139e-08, -0.99999994, -1.5765166e-16, 1, -4.3711385e-08, 0.09, 0.12712619, 0)
 
 [node name="paper_020_59" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="23"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08938542, 0.096705265, -5.505116e-11)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.13223809, 0)
 
 [node name="paper_021_60" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="24"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.6002357e-15, 0, -4.371139e-08, 0.99999994, -1.0720703e-07, 1, 4.3711385e-08, -0.089556836, 0.091989145, -1.6266996e-10)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705876e-24, 0, -4.371139e-08, -0.99999994, -1.5765166e-16, 1, -4.3711385e-08, 0.09, 0.13735, 0)
 
 [node name="paper_022_61" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="25"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08949523, 0.08660753, -3.6109013e-10)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.1424619, 0)
 
 [node name="paper_023_62" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="26"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.6002357e-15, 0, -4.371139e-08, 0.99999994, -1.0720703e-07, 1, 4.3711385e-08, -0.0896732, 0.0820994, -4.88802e-10)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705876e-24, 0, -4.371139e-08, -0.99999994, -1.5765166e-16, 1, -4.3711385e-08, 0.09, 0.1475738, 0)
 
 [node name="paper_024_63" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="27"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08959725, 0.07650083, -8.4026985e-10)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.1526857, 0)
 
 [node name="paper_025_64" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="28"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08960942, 0.071036234, -1.1757182e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.1577976, 0)
 
 [node name="paper_026_65" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="29"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.089664415, 0.066386126, -1.4748013e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.16290951, 0)
 
 [node name="paper_027_66" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="30"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08965056, 0.06101752, -1.8876283e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.16802141, 0)
 
 [node name="paper_028_67" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="31"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08967321, 0.056539886, -2.1589337e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.17313331, 0)
 
 [node name="paper_029_68" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="32"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08967057, 0.05131398, -2.6373346e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.17824522, 0)
 
 [node name="paper_030_69" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="33"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08966902, 0.04613572, -3.1501692e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.18335712, 0)
 
 [node name="paper_031_70" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="34"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08964213, 0.040566877, -3.7968784e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.18846902, 0)
 
 [node name="paper_032_71" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="35"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.0896711, 0.036001336, -4.165769e-09)
+transform = Transform3D(0.71000004, 2.2204458e-16, -9.705877e-24, 0, -4.371139e-08, -1, -1.5765166e-16, 1, -4.371139e-08, 0.09, 0.19358093, 0)
 
 [node name="paper_033_72" parent="Sketchfab_model/root/GLTF_SceneRootNode" index="36"]
-transform = Transform3D(-0.71000004, -1.509958e-07, -6.600236e-15, 0, -4.371139e-08, 1, -1.0720703e-07, 1, 4.371139e-08, -0.08960561, 0.030299386, -5.0895284e-09)
+transform = Transform3D(0.70996284, 2.2915003e-12, 0.010236279, 0.0072677587, -4.4744197e-10, -0.9999476, 1.6269653e-12, 1, -4.4744197e-10, 0.08786145, 0.19647984, 0)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
@@ -721,3 +718,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.06821599, 0.068215996, 0.06821599, 1)
 text = "Texto de prueba"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2930126, 0.43632078, 0)
+light_energy = 10.0
