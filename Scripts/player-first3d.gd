@@ -83,5 +83,5 @@ func _physics_process(delta: float) -> void:
 func _headbob(time) -> void:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FRECUENCIA) * BOB_AMPLITUD
-	pos.x = cos(time * BOB_FRECUENCIA / 2) * BOB_AMPLITUD
+	pos.x = -cos(time * BOB_FRECUENCIA / 2) * BOB_AMPLITUD
 	camara.position = pos_inicial_camara + pos
