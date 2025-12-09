@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2dk5lvwp5qjp"]
+
+[ext_resource type="PackedScene" uid="uid://b0g5mh4yvkpry" path="res://Resources/Animals/alpaca.glb" id="1_qs8ms"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_qs8ms")]

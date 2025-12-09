@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw4smywyjgtnj"]
+
+[ext_resource type="PackedScene" uid="uid://bpf636j6hk1fh" path="res://Resources/Animals/grey_wolf_rebuilt.glb" id="1_53db3"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_53db3")]
