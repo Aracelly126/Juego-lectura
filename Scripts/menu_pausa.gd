@@ -1,31 +1,43 @@
 extends Control
 
+# --- REFERENCIAS ---
+# Solo necesitamos el botón de salir
+# (Ajusta la ruta si tu botón no está dentro de VBoxContainer)
+@onready var boton_salir = $VBoxContainer/BotonSalir
+
 func _ready() -> void:
-	# Al iniciar el juego, nos aseguramos de que el menú esté oculto
+	# Ocultar menú al inicio
 	visible = false
+	
+	# Conectar solo el botón de salir
+	if boton_salir:
+		boton_salir.pressed.connect(_on_boton_salir_pressed)
+	else:
+		print("ERROR: No encuentro el BotonSalir.")
 
 func _input(event: InputEvent) -> void:
-	# Detectamos si presionas la tecla "ESC" (ui_cancel)
+	# Detectamos tecla ESC (ui_cancel) para abrir/cerrar el menú
 	if event.is_action_pressed("ui_cancel"):
 		cambiar_pausa()
 
 func cambiar_pausa():
-	# 1. Invertimos el estado de pausa (si es true pasa a false, y viceversa)
+	# 1. Invertir estado de pausa
 	var nuevo_estado = !get_tree().paused
 	get_tree().paused = nuevo_estado
 	
-	# 2. Mostramos u ocultamos este menú
+	# 2. Mostrar/Ocultar menú visual
 	visible = nuevo_estado
 	
-	# 3. MANEJO DEL MOUSE (Vital para juegos 3D)
+	# 3. Manejo del Ratón
 	if nuevo_estado:
-		# Si está pausado, muestra el mouse para poder hacer clic
+		# PAUSA: Mostrar ratón para poder clicar en Salir
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
-		# Si regresamos al juego, atrapa el mouse de nuevo
+		# JUEGO: Atrapamos el ratón para mover la cámara
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-# --- CONECTA ESTA FUNCIÓN A TU BOTÓN ---
-func _on_button_regresar_pressed() -> void:
-	# Al presionar el botón, llamamos a la misma función para quitar la pausa
-	cambiar_pausa()
+# --- FUNCIONES DE BOTONES ---
+
+func _on_boton_salir_pressed() -> void:
+	# Cerrar el juego
+	get_tree().quit()
