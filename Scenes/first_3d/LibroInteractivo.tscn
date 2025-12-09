@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c07iwlv0ueaku"]
+[gd_scene load_steps=7 format=3 uid="uid://c07iwlv0ueaku"]
 
 [ext_resource type="PackedScene" uid="uid://sps5nn4kr1lw" path="res://Resources/first_3d/book_animated_book__historical_book.glb" id="1_1bo6w"]
 [ext_resource type="Script" uid="uid://cle8d5wpovj5l" path="res://Scripts/libro-interactivo.gd" id="2_kplca"]
+[ext_resource type="Texture2D" uid="uid://c63iyxvydx8gm" path="res://Resources/first_3d/background_libro.png" id="3_xfpop"]
 
 [sub_resource type="Animation" id="Animation_kplca"]
 resource_name = "Animation"
@@ -659,8 +660,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0851898, 0)
 shape = SubResource("SphereShape3D_kplca")
 
 [node name="Label3D" type="Label3D" parent="." index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4357656, 4.40302, 4.316592)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2, 2.5)
 visible = false
 billboard = 1
 text = "Pulsa F para interactuar"
 font_size = 64
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
+
+[node name="Control" type="Control" parent="CanvasLayer" index="0"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 302.0
+offset_top = -48.0
+offset_right = 85.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xfpop")
+expand_mode = 1
+
+[node name="TextoIzquierda" type="RichTextLabel" parent="CanvasLayer/Control" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.367
+anchor_top = 0.035
+anchor_right = 0.65000004
+anchor_bottom = 0.818
+offset_left = 39.215973
+offset_top = 3.3199997
+offset_right = 0.19995117
+offset_bottom = -0.06402588
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.06821599, 0.068215996, 0.06821599, 1)
+text = "Texto de prueba"
+
+[node name="TextoDerecha" type="RichTextLabel" parent="CanvasLayer/Control" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.698
+anchor_top = 0.051000003
+anchor_right = 0.934
+anchor_bottom = 0.818
+offset_left = 1.9039917
+offset_top = -2.0480003
+offset_right = 4.0319824
+offset_bottom = -0.06402588
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.06821599, 0.068215996, 0.06821599, 1)
+text = "Texto de prueba"
