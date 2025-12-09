@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcxw0807usu53"]
+
+[ext_resource type="Script" uid="uid://bqdjxqbx26wds" path="res://Scripts/introduccion_scene.gd" id="1_jd8f2"]
+[ext_resource type="Texture2D" uid="uid://b6h1m2dohwgng" path="res://Resources/Generals/Bienvenida.png" id="2_nrc07"]
+[ext_resource type="Texture2D" uid="uid://p5x0d5mdjxa" path="res://Resources/Generals/Bienvenida-button.png" id="3_nrc07"]
+
+[node name="Introduccion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jd8f2")
+
+[node name="background_image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_nrc07")
+expand_mode = 1
+
+[node name="button_play" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 425.0
+offset_top = 484.0
+offset_right = 735.0
+offset_bottom = 605.0
+texture_normal = ExtResource("3_nrc07")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="button_play" to="." method="_on_button_play_pressed"]

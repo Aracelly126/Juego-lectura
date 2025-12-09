@@ -15,7 +15,6 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_fgp8h")
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="button_play" type="TextureButton" parent="."]
 layout_mode = 0
