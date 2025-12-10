@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 # --- CONFIGURACIÓN DE MOVIMIENTO ---
 # --- 2.75 ---
-const VELOCIDAD = 2.75
+const VELOCIDAD = 10
 const SALTO = 4.5
 const SENSIBILIDAD = 0.003
 var gravedad = ProjectSettings.get_setting("physics/3d/default_gravity")

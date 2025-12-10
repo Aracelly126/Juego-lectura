@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://da7gw4wxluj61"]
+
+[ext_resource type="Script" uid="uid://derriaruhfgsd" path="res://Scripts/control_final_image.gd" id="1_cbl8i"]
+[ext_resource type="Texture2D" uid="uid://do5aaq600fyxi" path="res://Resources/first_3d/imagen-final.jpeg" id="1_ljqor"]
+[ext_resource type="AudioStream" uid="uid://b0df5xwusg0in" path="res://Resources/music/primera-musica.mp3" id="2_mde17"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbl8i")
+
+[node name="background_image" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_ljqor")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_mde17")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
+[node name="BotonRegreso3D" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.367
+anchor_top = 0.77300006
+anchor_right = 0.638
+anchor_bottom = 0.93700004
+offset_left = 0.2159729
+offset_top = 0.095947266
+offset_right = 0.023986816
+offset_bottom = -0.17602539
+
+[connection signal="pressed" from="BotonRegreso3D" to="." method="_on_boton_regreso_3d_pressed"]

@@ -6,10 +6,10 @@ extends Node3D
 @export_multiline var frase_desafio: String = "¡Demuestra tu sabiduría!"
 
 @export_group("Preguntas")
-@export_multiline var pregunta: String = "¿Qué dice el zorro?"
-@export var opcion_1: String = "Ring-ding-ding"
-@export var opcion_2: String = "Guau Guau"
-@export var opcion_3: String = "Miau"
+@export_multiline var pregunta: String = "¿Qué dice el animal?"
+@export var opcion_1: String = "Opción 1"
+@export var opcion_2: String = "Opción 2"
+@export var opcion_3: String = "Opción 3"
 @export var correcta: int = 1 
 
 # --- 2. CONEXIONES UI ---
@@ -24,6 +24,10 @@ extends Node3D
 @export_group("Efectos")
 @export var luz_magica: OmniLight3D
 
+# --- 4. TELETRANSPORTE FINAL (¡NUEVO!) ---
+@export_group("Teletransporte a Escena 2D")
+@export var escena_destino_2d: PackedScene # Arrastra aquí la escena 2D (Ej: "Escena2D_Juego.tscn")
+
 # --- REFERENCIAS INTERNAS ---
 @onready var cartel_flotante = $Label3D
 var jugador_cerca = false
@@ -34,7 +38,7 @@ func _ready():
 	# Buscamos el área de charla
 	var area = $AreaCharla
 	if area:
-		# Aseguramos que la interacción del animal esté APAGADA al inicio
+		# ¡CRÍTICO! El animal empieza sordo hasta que la Zona lo activa
 		area.monitoring = false 
 		
 		area.body_entered.connect(_entrar)
@@ -43,7 +47,7 @@ func _ready():
 		print("ERROR: ¡Al animal le falta el nodo AreaCharla!")
 	
 	if cartel_flotante: cartel_flotante.visible = false
-	# ... (resto del código) ...
+	if luz_magica: luz_magica.light_energy = 0.0
 
 func _input(event):
 	if jugador_cerca and Input.is_action_just_pressed("interactuar"):
@@ -85,7 +89,7 @@ func revisar(eleccion):
 		# --- SALVAR AL JUGADOR ---
 		var jugador_a_liberar = jugador_ref 
 		
-		# --- ANIMACIÓN ---
+		# --- ANIMACIÓN DE DESAPARICIÓN SUAVE ---
 		var tween = create_tween()
 		tween.set_parallel(true)
 		
@@ -96,13 +100,28 @@ func revisar(eleccion):
 		
 		await get_tree().create_timer(1.5).timeout
 		
-		# --- LIBERAR JUGADOR ---
-		if jugador_a_liberar and jugador_a_liberar.has_method("cambiar_estado_movimiento"):
-			jugador_a_liberar.cambiar_estado_movimiento(true)
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		
-		queue_free()
-		
+		# --- DECISIÓN FINAL (¡TELETRANSPORTE AQUÍ!) ---
+		if escena_destino_2d:
+			print("Cambiando a escena 2D...")
+			
+			# 1. Liberamos el mouse para la escena 2D
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE 
+			
+			# 2. Aseguramos que el jugador se libere antes de que la escena lo destruya
+			if jugador_a_liberar and jugador_a_liberar.has_method("cambiar_estado_movimiento"):
+				jugador_a_liberar.cambiar_estado_movimiento(true)
+			
+			# 3. CAMBIAMOS DE ESCENA
+			get_tree().change_scene_to_packed(escena_destino_2d)
+			return # Terminamos la función aquí
+			
+		else:
+			# Si NO hay destino 2D, comportamiento normal (desaparecer y devolver control)
+			if jugador_a_liberar and jugador_a_liberar.has_method("cambiar_estado_movimiento"):
+				jugador_a_liberar.cambiar_estado_movimiento(true)
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			queue_free()
+			
 	else:
 		print("Incorrecto...")
 		
