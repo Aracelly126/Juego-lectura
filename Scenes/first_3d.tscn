@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=4 uid="uid://ulbcxmat2uc8"]
+[gd_scene load_steps=72 format=4 uid="uid://ulbcxmat2uc8"]
 
 [ext_resource type="PackedScene" uid="uid://cul825lramx12" path="res://Scenes/menu_pausa.tscn" id="1_kte3u"]
 [ext_resource type="Script" uid="uid://dgpeurgi64np0" path="res://Scripts/player-first3d.gd" id="1_qkeoe"]
@@ -12,14 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://c13hoj42ijfvv" path="res://Resources/first_3d/Grass/grass_pack_lp_1.png" id="11_wqkch"]
 [ext_resource type="Texture2D" uid="uid://cd3b6ji8pk1jj" path="res://Resources/first_3d/Grass/grass_pack_lp_0.png" id="12_ejvt1"]
 [ext_resource type="Texture2D" uid="uid://bldc3u5iuslbp" path="res://Resources/first_3d/Grass/grass_pack_lp_2.png" id="13_gkbiy"]
-[ext_resource type="Texture2D" uid="uid://7tf4smg1cq4r" path="res://Resources/first_3d/Imagenes_libros/imagen1_libro1.jpeg" id="23_fj2lo"]
-[ext_resource type="Texture2D" uid="uid://cb6ma3287nmvd" path="res://Resources/first_3d/Imagenes_libros/tesoro-inca.jpg" id="24_g752b"]
-[ext_resource type="Texture2D" uid="uid://c6x7a0bb4n0vd" path="res://Resources/first_3d/Imagenes_libros/Imagen-final-libros.jpg" id="24_qi1nd"]
 [ext_resource type="PackedScene" uid="uid://bmht0g8k3pfyh" path="res://Resources/first_3d/Rocks/Rock Medium-JQxF95498B.glb" id="25_3br0j"]
-[ext_resource type="Texture2D" uid="uid://cc3y5rjostkst" path="res://Resources/first_3d/Imagenes_libros/paramo-llanganates.jpeg" id="25_xb5ib"]
 [ext_resource type="PackedScene" uid="uid://dtwq5ot2ak1ds" path="res://Resources/first_3d/Rocks/Rock Medium-s1OJ3bBzqc.glb" id="26_15fcv"]
 [ext_resource type="PackedScene" uid="uid://bx7ahgvujy87l" path="res://Resources/first_3d/Rocks/Rock Medium.glb" id="27_fowks"]
 [ext_resource type="PackedScene" uid="uid://blbl18aeu6y18" path="res://Scenes/Animals/zorro.tscn" id="27_xb5ib"]
+[ext_resource type="Script" uid="uid://clyunlyjx7q1" path="res://Scripts/Animals/CerebroAnimal.gd" id="28_p5kob"]
 [ext_resource type="PackedScene" uid="uid://djlhximrm0t5k" path="res://Resources/first_3d/Rocks/Rock Path Round Thin.glb" id="28_trh22"]
 [ext_resource type="Script" uid="uid://mg03pa3o21qs" path="res://Scripts/pared_zorro.gd" id="28_yxbvs"]
 [ext_resource type="PackedScene" uid="uid://c2dk5lvwp5qjp" path="res://Scenes/Animals/alpaca.tscn" id="29_874c7"]
@@ -820,13 +817,29 @@ tracks/45/interp = 1
 tracks/45/loop_wrap = true
 tracks/45/keys = PackedFloat32Array(0, 1, 0.6381614, 0.13719803, -0.052780807, 0.7557386, 8.3, 1, 0.6380864, 0.13612571, -0.053686716, 0.7559321, 8.333333, 1, 0.6363741, 0.14261134, -0.065089874, 0.7552836, 8.366667, 1, 0.63166606, 0.15892226, -0.09396669, 0.7529356, 8.4, 1, 0.6255628, 0.17556265, -0.12459752, 0.74988294, 8.433333, 1, 0.618096, 0.19249552, -0.15654153, 0.7459206, 8.466666, 1, 0.60285133, 0.22360055, -0.21404287, 0.735363, 8.5, 1, 0.5910279, 0.24858993, -0.25660548, 0.7232169, 8.533334, 1, 0.58304745, 0.2668099, -0.28487012, 0.7125428, 8.6, 1, 0.56958055, 0.3053436, -0.33587196, 0.6852251, 8.633333, 1, 0.5636272, 0.32669595, -0.36025494, 0.6676906, 8.666667, 1, 0.5577313, 0.34853694, -0.3836647, 0.64827406, 8.7, 1, 0.5481364, 0.38277817, -0.4179165, 0.6151204, 8.733334, 1, 0.5379285, 0.41527224, -0.44871822, 0.5803739, 8.766666, 1, 0.53134423, 0.43332356, -0.4651816, 0.5599197, 8.8, 1, 0.52475864, 0.4493916, -0.47948968, 0.5410778, 8.833333, 1, 0.51802677, 0.46224636, -0.49141863, 0.52581775, 8.866667, 1, 0.5040368, 0.4775294, -0.5084509, 0.5093037, 8.9, 1, -0.5001908, -0.4880965, 0.51230997, -0.49910867, 8.933333, 1, -0.4968624, -0.49298003, 0.51389545, -0.49599385, 8.966666, 1, -0.49381822, -0.4966935, 0.51466125, -0.49453306, 9, 1, -0.4913646, -0.49933994, 0.514671, -0.49430174, 9.033334, 1, -0.4896501, -0.50119585, 0.51430905, -0.49450147, 9.066667, 1, -0.48802793, -0.50368243, 0.51423943, -0.49365023, 9.1, 1, -0.487605, -0.5051354, 0.51382285, -0.4930169, 9.166667, 1, -0.4880869, -0.50593215, 0.5127961, -0.492792, 9.2, 1, -0.4882981, -0.50612813, 0.51239455, -0.49279928, 9.233334, 1, -0.48910457, -0.5058814, 0.51146805, -0.4932151, 9.266666, 1, -0.49098083, -0.5049671, 0.50947595, -0.49434835, 9.3, 1, -0.4925713, -0.5040939, 0.5078239, -0.4953562, 9.4, 1, -0.49631187, -0.5018514, 0.5040072, -0.49779156, 9.433333, 1, -0.49747485, -0.5011762, 0.5027922, -0.49853906, 9.466666, 1, -0.4985336, -0.50061536, 0.50163543, -0.49920973, 9.5, 1, 0.4996912, 0.4994688, -0.5003716, 0.5004677, 19.6, 1, 0.50000006, 0.49999997, -0.49999997, 0.50000006, 19.633333, 1, 0.5012124, 0.50631326, -0.49780133, 0.49459764, 19.666666, 1, 0.5035778, 0.5136147, -0.49334627, 0.48909992, 19.7, 1, 0.50447416, 0.5272597, -0.4884289, 0.478477, 19.733334, 1, 0.5063393, 0.5395584, -0.48302633, 0.46816966, 19.766666, 1, 0.51106805, 0.543623, -0.47801915, 0.46344495, 19.8, 1, 0.51924664, 0.543685, -0.47165504, 0.46079397, 19.833334, 1, 0.53309065, 0.5374466, -0.4630885, 0.46099296, 19.866667, 1, 0.55433995, 0.5240077, -0.45173398, 0.4626657, 19.9, 1, 0.6047998, 0.4889375, -0.42522353, 0.4629711, 19.933332, 1, 0.6543208, 0.43173805, -0.39794156, 0.47655967, 19.966667, 1, 0.6854408, 0.39444005, -0.37693623, 0.48218983, 20, 1, 0.7125626, 0.35763654, -0.35499966, 0.48818633, 20.033333, 1, 0.732663, 0.32629624, -0.33359432, 0.4954297, 20.066668, 1, 0.7478603, 0.2905667, -0.30114836, 0.51535, 20.1, 1, 0.7529908, 0.2669831, -0.27786776, 0.5333989, 20.266666, 1, 0.7357007, 0.21394134, -0.20020781, 0.6106475, 20.333334, 1, 0.70825726, 0.18996741, -0.1522461, 0.6626501, 20.366667, 1, 0.6980253, 0.18354893, -0.13691655, 0.67847204, 20.4, 1, 0.68748564, 0.17668104, -0.12206502, 0.6937201, 20.433332, 1, 0.6769065, 0.16927439, -0.10765921, 0.7082042, 20.466667, 1, 0.66640306, 0.16123885, -0.093592785, 0.7219068, 20.5, 1, 0.6503785, 0.14786598, -0.07022586, 0.7417626, 20.533333, 1, 0.6381614, 0.13719803, -0.05278068, 0.7557386, 20.56, 1, 0.6381614, 0.13719803, -0.052780677, 0.7557386)
 
+[sub_resource type="Animation" id="Animation_p5kob"]
+resource_name = "salto"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_874c7"]
 _data = {
-&"root_001|Waking Up": SubResource("Animation_yxbvs")
+&"root_001|Waking Up": SubResource("Animation_yxbvs"),
+&"salto": SubResource("Animation_p5kob")
 }
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yxbvs"]
+radius = 383.89624
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_874c7"]
 size = Vector3(0.001, 2.4018555, 2.1660156)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_874c7"]
+radius = 7.8528714
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wdyji"]
+radius = 1.9225161
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pc7vl"]
+radius = 8.281617
 
 [node name="First-3D" type="Node3D"]
 
@@ -841,6 +854,71 @@ environment = SubResource("Environment_qkeoe")
 layer = 100
 
 [node name="MenuPausa" parent="CapaMenuPausa" instance=ExtResource("1_kte3u")]
+
+[node name="CapaQuiz" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CapaQuiz"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextoPregunta" type="Label" parent="CapaQuiz/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27800003
+anchor_top = 0.17300001
+anchor_right = 0.66700006
+anchor_bottom = 0.296
+offset_left = -0.25604248
+offset_top = -0.104003906
+offset_right = -0.3840332
+offset_bottom = 1.1920013
+grow_horizontal = 2
+
+[node name="Boton1" type="Button" parent="CapaQuiz/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.395
+anchor_right = 0.55600005
+anchor_bottom = 0.49400002
+offset_left = -0.12802124
+offset_top = 0.039993286
+offset_right = -0.51208496
+offset_bottom = -0.11199951
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boton2" type="Button" parent="CapaQuiz/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.59300005
+anchor_right = 0.55600005
+anchor_bottom = 0.69100004
+offset_left = -0.12802124
+offset_top = -0.2640381
+offset_right = -0.51208496
+offset_bottom = 0.23196411
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Boton3" type="Button" parent="CapaQuiz/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.79
+anchor_right = 0.55600005
+anchor_bottom = 0.88900006
+offset_left = -0.12802124
+offset_top = 0.07998657
+offset_right = -0.51208496
+offset_bottom = -0.072021484
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Clouds" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.117867, 0.10850523, 1.9344485)
@@ -4282,63 +4360,123 @@ transform = Transform3D(-0.99945766, 0, -0.032928396, 0, 1, 0, 0.032928396, 0, -
 
 [node name="book1" parent="Books" instance=ExtResource("30_wdyji")]
 transform = Transform3D(-0.07361661, -0.014319418, -0.0007412171, -0.004795044, 0.028239444, -0.06931479, 0.013513057, -0.06798888, -0.028634058, 77.86987, 0.8165933, 17.702457)
-izq_texto = "Tras la captura de Atahualpa, se cuenta que el tesoro del Inca fue escondido en estas montañas, para que nadie pudiera robarlo. Oro, plata y objetos sagrados fueron ocultos, y solo aquellos que comprendieran la historia podrían hallarlos.
-Observa con atención: las piedras cubiertas de musgo y con formas especiales son señales que te guiarán. La primera pista está en la piedra que refleja la forma de un antiguo objeto del tesoro, tal como los guardianes de la historia lo dejaron.\"
-Pista: Seguir el patrón de piedras con marcas o símbolos, la siguiente piedra contiene el siguiente libro."
-der_usar_imagen = true
-der_textura = ExtResource("23_fj2lo")
+izq_texto = "Tras la captura del Inca Atahualpa en Cajamarca en 1532, los españoles exigieron un rescate sin precedentes: llenar una habitación de oro y dos de plata. Este ofrecimiento es un hecho histórico registrado en las crónicas de Francisco de Xerez y otros testigos. Miles de objetos incaicos —vasijas ceremoniales, planchas de templos, figuras religiosas y ornamentos— comenzaron a ser transportados desde distintas regiones del Tahuantinsuyo hacia Cajamarca."
+der_texto = "Sin embargo, no todo el tesoro llegó. Las crónicas señalan que varias caravanas fueron detenidas al conocerse la ejecución del Inca en 1533. Para evitar que el oro cayera en manos españolas, muchos encargados del transporte ocultaron los objetos en montañas, lagos y quebradas. Este hecho dio origen a la famosa “Leyenda del Tesoro de Atahualpa”, pero la base histórica es real: parte del rescate desapareció sin dejar rastro."
 
 [node name="book2" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.06901457, 0.02849301, 0.007080617, -0.0010560467, 0.020485085, -0.07214043, -0.029340617, 0.06628354, 0.01925146, 66.70986, 1.2523979, 11.375157)
-izq_texto = "Hace siglos, los pobladores del páramo conocían rutas ocultas que atravesaban quebradas y rocas gigantes. Estos caminos eran vitales para proteger los secretos del Inca y sus tesoros. 
-
-Cada piedra podía advertir del peligro o señalar la dirección correcta, y algunos incluso estaban marcadas con símbolos que representaban objetos sagrados o el sol y la luna."
-der_texto = "Las leyendas cuentan que los mensajeros del Inca recorrían estos caminos para llevar información importante sin ser detectados. Ahora, José, tu misión es similar: debes interpretar las señales de las piedras y el musgo para avanzar, aprendiendo la historia mientras descubres cada pista"
+izq_texto = "Los mensajeros incas que transportaban el rescate conocían rutas establecidas y bien vigiladas. Se movían por los Qhapaq Ñan, los caminos imperiales que comunicaban todo el territorio. Documentos coloniales mencionan que el oro provenía de lugares como Pachacamac, Cusco y Quito, y se enviaba en caravanas de llamas cargadas con piezas labradas y lingotes obtenidos mediante fundición."
+der_texto = "Cuando se supo que Atahualpa había sido ejecutado, varios gobernadores locales decidieron detener las entregas. Las crónicas indican que algunos grupos enterraron o escondieron las cargas para proteger el patrimonio sagrado, mientras otros regresaron a sus regiones con los objetos. Este comportamiento explica por qué parte del rescate nunca llegó a manos españolas."
 zona_a_desbloquear = NodePath("../../Animals/ZonaZorro")
 color_del_brillo = Color(0.0030078832, 3.9467217e-05, 0.89840245, 1)
 
 [node name="book3" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.067443, 0.021225147, 0.025018683, 0.011205848, 0.03885027, -0.063167065, -0.030836185, 0.060540445, 0.03176445, 47.0324, 0.9684355, 3.0044258)
-izq_texto = "Se dice que el tesoro de Atahualpa no solo contenía oro y plata, sino también objetos de valor espiritual, como símbolos de poder y piezas de la cultura inca. Antes de ser apresado, Atahualpa habría ordenado esconderlo en un lugar protegido por la naturaleza.
-Los relatos cuentan que los objetos estaban agrupados de manera simbólica, representando mensajes, tradiciones y consejos para el futuro.
-Observa las piedras a tu alrededor: algunas imitan la forma de estos objetos y te guían hacia la siguiente pista"
-der_usar_imagen = true
-der_texto = ""
-der_textura = ExtResource("24_g752b")
+izq_texto = "El oro enviado como rescate no consistía en monedas, pues los incas no las utilizaban. Los españoles registraron objetos de uso ceremonial: figuras de animales, vasos rituales, máscaras, ornamentos de templos y placas de oro y plata martilladas. Todo esto fue fundido por orden de los conquistadores para facilitar su peso y transporte a Europa."
+der_texto = "Los cronistas detallan que el valor simbólico de estos objetos era mayor que el material, ya que muchos representaban divinidades como Inti (el Sol) o estaban vinculados al culto imperial. Por eso, algunos nobles incaicos consideraron que entregar estas piezas equivalía a entregar una parte de su identidad cultural."
 zona_a_desbloquear = NodePath("../../Animals/ZonaAlpaca")
 color_del_brillo = Color(0.9014576, 0, 0.099874236, 1)
 
 [node name="book4" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(-0.073050335, 0.0024393818, -0.016813543, 0.014159284, 0.049761083, -0.054298647, 0.009389397, -0.05606141, -0.048928067, 29.490019, 0.19672304, 13.458467)
-izq_usar_imagen = true
-izq_texto = ""
-izq_textura = ExtResource("25_xb5ib")
-der_texto = "En los páramos, la naturaleza es un lenguaje antiguo. Las piedras, el musgo y su disposición guardan secretos que han pasado de generación en generación.
-Los antiguos confiaban en estas señales para proteger su cultura y los tesoros del Inca. Algunas piedras parecen alinearse de forma especial y el musgo crece más denso en ciertos lugares. Cada detalle puede revelar un mensaje o una dirección"
+izq_texto = "Una de las desapariciones más documentadas es la del tesoro proveniente de Quito, dirigido por Rumiñahui. Al enterarse de la muerte de Atahualpa, el general habría ordenado ocultar las cargas para impedir que los españoles las obtuvieran. Si bien el lugar exacto nunca fue confirmado, las crónicas españolas sí mencionan que el rescate desde el norte “nunca llegó”."
+der_texto = "Este hecho dio fuerza a la idea del tesoro oculto. No se trata de una leyenda inventada en tiempos modernos, sino de registros coloniales auténticos que describen caravanas que desaparecieron deliberadamente. Lo que se perdió no fue “oro mágico”, sino objetos reales del Imperio Inca cuyo destino final sigue sin conocerse."
 zona_a_desbloquear = NodePath("../../Animals/ZonaSapo")
 
 [node name="book5" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.043297958, 0.052962754, 0.030744659, 0.009604562, 0.03131404, -0.06746981, -0.06048172, 0.04288793, 0.0112953605, 5.2437205, 0.81688535, 20.829332)
-izq_texto = "Has llegado al final, José. Aquí, la observación y la historia se unen. Los antiguos dejaron acertijos entre las piedras:
-✔ Una piedra más alta que las demás marca el paso correcto.
-✔ Tres piedras juntas esconden un mensaje antiguo.
-✔ Algunas piedras parecen repetirse: observa, compara y resuelve.
-El tesoro te espera, pero recuerda: la verdadera riqueza es el conocimiento que has reunido en el camino."
-der_usar_imagen = true
-der_textura = ExtResource("24_qi1nd")
+izq_texto = "El verdadero misterio del tesoro de Atahualpa no está en la fantasía, sino en la ausencia total de hallazgos arqueológicos que confirmen la ubicación de las caravanas desaparecidas. Ningún registro indica que los españoles lo encontraran, y su valor histórico radica en lo que representaba: la grandeza del Imperio Inca y la tragedia de su caída."
+der_texto = "Hoy, arqueólogos e historiadores coinciden en que parte del rescate se perdió porque fue ocultado por los propios incas para protegerlo. Esta acción es uno de los últimos actos de resistencia cultural tras la muerte del Inca. Más que un tesoro material, simboliza la lucha por preservar una identidad frente a la conquista."
 zona_a_desbloquear = NodePath("../../Animals/ZonaWolf")
 color_del_brillo = Color(0.8696285, 0, 0.09471998, 1)
 
 [node name="Animals" type="Node3D" parent="."]
 
-[node name="zorro" parent="Animals" instance=ExtResource("27_xb5ib")]
+[node name="zorro" parent="Animals" node_paths=PackedStringArray("panel_quiz", "lbl_pregunta", "btn_1", "btn_2", "btn_3", "luz_magica") instance=ExtResource("27_xb5ib")]
 transform = Transform3D(0.004930995, 0, 0.00082782004, 0, 0.005, 0, -0.00082782004, 0, 0.004930995, 60.160923, 0.056946516, 8.299369)
 visible = false
+script = ExtResource("28_p5kob")
+frase_desafio = "El camino hacia Cajamarca"
+pregunta = "¿Qué caminos utilizaban los mensajeros para transportar el rescate?"
+opcion_1 = "El sistema vial inca conocido como Qhapaq Ñan"
+opcion_2 = "Caminos improvisados entre las montañas"
+opcion_3 = "Senderos abiertos por los conquistadores"
+panel_quiz = NodePath("../../CapaQuiz/Panel")
+lbl_pregunta = NodePath("../../CapaQuiz/Panel/TextoPregunta")
+btn_1 = NodePath("../../CapaQuiz/Panel/Boton1")
+btn_2 = NodePath("../../CapaQuiz/Panel/Boton2")
+btn_3 = NodePath("../../CapaQuiz/Panel/Boton3")
+luz_magica = NodePath("LuzMagica")
+
+[node name="Skeleton3D" parent="Animals/zorro/Sketchfab_model/601576fce4814617ab1896d47107c82f_fbx/Object_2/RootNode/SK_Fox/root_001/Object_6" index="0"]
+bones/1/position = Vector3(4.770747e-06, 19.268534, 7.0226746)
+bones/1/rotation = Quaternion(0.6381614, 0.13719802, -0.05278081, 0.7557386)
+bones/2/rotation = Quaternion(0.5416752, 0.45451957, 0.5416746, -0.45452017)
+bones/3/rotation = Quaternion(0.8275183, 0.559724, -0.042844504, -0.009324877)
+bones/4/rotation = Quaternion(8.229784e-08, -1.443194e-07, -0.6247339, 0.7808377)
+bones/5/rotation = Quaternion(6.469309e-08, 3.2346552e-08, 0.62902576, 0.77738446)
+bones/6/rotation = Quaternion(-0.057404622, -0.00300392, -0.29081982, 0.9550495)
+bones/8/rotation = Quaternion(0.8838839, 0.4106086, -0.022889819, -0.22276878)
+bones/9/rotation = Quaternion(4.0066944e-08, 2.1783967e-08, -0.8010949, 0.5985374)
+bones/10/rotation = Quaternion(5.1025687e-08, -7.274322e-08, 0.56045336, 0.82818604)
+bones/11/rotation = Quaternion(0.000501676, 0.16020736, -0.15381831, 0.9750248)
+bones/13/position = Vector3(7.194259, -0.0066892505, 0.0049858987)
+bones/13/rotation = Quaternion(-0.31492382, 0.06888019, 7.006763e-05, 0.94661427)
+bones/14/position = Vector3(10.477976, -0.009707842, 0.0051865056)
+bones/14/rotation = Quaternion(-0.24347284, -0.032185927, -0.033787314, 0.9687845)
+bones/15/position = Vector3(13.852852, -4.5726237, 5.4836273e-05)
+bones/15/rotation = Quaternion(0.018711105, -0.074263446, 0.33212054, 0.9401228)
+bones/16/rotation = Quaternion(-0.08019721, -0.09171812, -0.010252587, 0.9924975)
+bones/17/rotation = Quaternion(-0.059856325, -0.18073298, -0.018616619, 0.9815326)
+bones/18/rotation = Quaternion(-0.026846943, -0.05009295, -0.679972, 0.73103225)
+bones/19/position = Vector3(-1.348361, -0.39393926, -5.7965517e-06)
+bones/19/rotation = Quaternion(2.5313946e-08, -2.0368389e-06, 0.68945956, 0.7243242)
+bones/21/rotation = Quaternion(0.7070322, -0.09535579, 0.6940342, -0.096588396)
+bones/22/rotation = Quaternion(-0.42911896, 0.3459827, -0.5480388, 0.6291315)
+bones/23/rotation = Quaternion(7.069297e-08, 8.261119e-08, -0.7011102, 0.7130529)
+bones/24/rotation = Quaternion(-0.24032417, -0.018479293, -0.02856396, 0.97009635)
+bones/25/rotation = Quaternion(-0.00039712858, -2.8358214e-05, -0.07135433, 0.99745095)
+bones/27/rotation = Quaternion(-0.62679195, 0.20080295, 0.7331427, -0.17120719)
+bones/28/rotation = Quaternion(0.33176515, -0.5165778, -0.5896763, 0.52474874)
+bones/29/rotation = Quaternion(-7.5031515e-08, 2.177164e-08, -0.6920394, 0.72185975)
+bones/30/rotation = Quaternion(0.16569641, 0.00024360667, -0.013768677, 0.98608065)
+bones/31/rotation = Quaternion(0.00039705346, 2.8450224e-05, -0.07135439, 0.99745095)
+bones/33/position = Vector3(-5.1420565, -2.8704636, -0.5079107)
+bones/33/rotation = Quaternion(0.15355363, 0.1384168, 0.947152, 0.24528597)
+bones/34/position = Vector3(4.574345, -0.00406003, -0.0029845536)
+bones/34/rotation = Quaternion(0.29050884, 0.019240543, -0.23480505, 0.9274163)
+bones/35/position = Vector3(7.078478, -0.004880313, -0.0029085875)
+bones/35/rotation = Quaternion(0.19272974, 0.15021814, 0.30056223, 0.9219285)
+bones/36/position = Vector3(8.201977, -0.0064432025, 0.0001859963)
+bones/36/rotation = Quaternion(-0.015556719, 0.156987, 0.005550581, 0.9874626)
+bones/37/position = Vector3(8.10295, -0.0053364933, -0.000117093325)
+bones/37/rotation = Quaternion(0.03291831, 0.19408807, -0.11022449, 0.974216)
+bones/38/position = Vector3(6.8795166, -0.0053652674, -0.0013072789)
+bones/38/rotation = Quaternion(0.12698124, 0.10187914, -0.086610354, 0.9828505)
 
 [node name="AnimationPlayer" parent="Animals/zorro" index="1"]
 libraries = {
 &"": SubResource("AnimationLibrary_874c7")
 }
+
+[node name="AreaCharla" type="Area3D" parent="Animals/zorro"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Animals/zorro/AreaCharla"]
+shape = SubResource("SphereShape3D_yxbvs")
+
+[node name="Label3D" type="Label3D" parent="Animals/zorro"]
+transform = Transform3D(0.9999999, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 0.9999999, 17.83496, 141.37515, 58.556152)
+visible = false
+pixel_size = 0.4
+billboard = 1
+text = "Hola"
+outline_size = 6
+
+[node name="LuzMagica" type="OmniLight3D" parent="Animals/zorro"]
+light_color = Color(0.003921569, 0, 0.8980392, 1)
+shadow_enabled = true
+omni_range = 1.0421989
 
 [node name="ZonaZorro" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.8729306, 0, -0.48784444, 0, 1, 0, 0.48784444, 0, 0.8729306, 62.96426, 2.0128746, 12.163083)
@@ -4352,9 +4490,43 @@ nombre_animacion = "root_001|Waking Up"
 transform = Transform3D(0.9994844, 0, -0.032108396, 0, 1, 0, 0.032108396, 0, 0.9994844, -0.17916489, -0.70092773, -0.0030269623)
 shape = SubResource("BoxShape3D_874c7")
 
-[node name="alpaca" parent="Animals" instance=ExtResource("29_874c7")]
+[node name="alpaca" parent="Animals" node_paths=PackedStringArray("panel_quiz", "lbl_pregunta", "btn_1", "btn_2", "btn_3", "luz_magica") instance=ExtResource("29_874c7")]
 transform = Transform3D(-0.083169244, 0, 0.28824103, 0, 0.30000004, 0, -0.28824103, 0, -0.083169244, 39.93246, 0, 6.0455456)
 visible = false
+script = ExtResource("28_p5kob")
+frase_desafio = "Los objetos del rescate"
+pregunta = "¿Qué tipo de objetos formaban la mayor parte del rescate?"
+opcion_1 = "Monedas de oro y plata"
+opcion_2 = "Objetos ceremoniales y placas de templos"
+opcion_3 = "Herramientas agrícolas"
+correcta = 2
+panel_quiz = NodePath("../../CapaQuiz/Panel")
+lbl_pregunta = NodePath("../../CapaQuiz/Panel/TextoPregunta")
+btn_1 = NodePath("../../CapaQuiz/Panel/Boton1")
+btn_2 = NodePath("../../CapaQuiz/Panel/Boton2")
+btn_3 = NodePath("../../CapaQuiz/Panel/Boton3")
+luz_magica = NodePath("LuzMagica")
+
+[node name="Sketchfab_model" parent="Animals/alpaca" index="0"]
+transform = Transform3D(0.8736024, -0.48664033, 1.0805586e-16, 0, 2.220446e-16, 1, -0.48664033, -0.8736024, 1.939787e-16, 0, 0, 0)
+
+[node name="AreaCharla" type="Area3D" parent="Animals/alpaca"]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Animals/alpaca/AreaCharla"]
+shape = SubResource("SphereShape3D_874c7")
+
+[node name="Label3D" type="Label3D" parent="Animals/alpaca"]
+transform = Transform3D(0.9999999, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 0.9999999, 1.9439774, 4.1636696, 1.4906006)
+visible = false
+billboard = 1
+text = "Hola"
+outline_size = 6
+
+[node name="LuzMagica" type="OmniLight3D" parent="Animals/alpaca"]
+light_color = Color(0.9019608, 0, 0.09803922, 1)
+shadow_enabled = true
+omni_range = 1.0421989
 
 [node name="ZonaAlpaca" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.9996929, 0, -0.024781182, 0, 1, 0, 0.024781182, 0, 0.9996929, 43.821075, 2.0128746, 4.4045033)
@@ -4368,9 +4540,40 @@ nombre_animacion = "Animation"
 transform = Transform3D(0.9994844, 0, -0.032108396, 0, 1, 0, 0.032108396, 0, 0.9994844, -0.17916489, -0.70092773, -0.0030269623)
 shape = SubResource("BoxShape3D_874c7")
 
-[node name="sapo" parent="Animals" instance=ExtResource("30_pc7vl")]
+[node name="sapo" parent="Animals" node_paths=PackedStringArray("panel_quiz", "lbl_pregunta", "btn_1", "btn_2", "btn_3", "luz_magica") instance=ExtResource("30_pc7vl")]
 transform = Transform3D(-0.50173724, 0, 0.86502016, 0, 1, 0, -0.86502016, 0, -0.50173724, 19.452646, -0.7261822, 16.21699)
 visible = false
+script = ExtResource("28_p5kob")
+frase_desafio = "El tesoro que se perdió en el camino"
+pregunta = "¿Qué ocurrió con el tesoro que venía desde Quito?"
+opcion_1 = "Llegó completo a Cajamarca"
+opcion_2 = "Fue ocultado tras la muerte de Atahualpa"
+opcion_3 = "Fue capturado por otro grupo inca"
+correcta = 2
+panel_quiz = NodePath("../../CapaQuiz/Panel")
+lbl_pregunta = NodePath("../../CapaQuiz/Panel/TextoPregunta")
+btn_1 = NodePath("../../CapaQuiz/Panel/Boton1")
+btn_2 = NodePath("../../CapaQuiz/Panel/Boton2")
+btn_3 = NodePath("../../CapaQuiz/Panel/Boton3")
+luz_magica = NodePath("LuzMagica")
+
+[node name="AreaCharla" type="Area3D" parent="Animals/sapo"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Animals/sapo/AreaCharla"]
+shape = SubResource("SphereShape3D_wdyji")
+
+[node name="Label3D" type="Label3D" parent="Animals/sapo"]
+transform = Transform3D(0.9999999, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, 0.9999999, 0.27737427, 0.46550518, -0.18333721)
+visible = false
+pixel_size = 0.004
+billboard = 1
+text = "Hola"
+outline_size = 6
+
+[node name="LuzMagica" type="OmniLight3D" parent="Animals/sapo"]
+light_color = Color(1, 0.8, 0.2, 1)
+shadow_enabled = true
+omni_range = 1.0421989
 
 [node name="ZonaSapo" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.879416, 0, 0.47605395, 0, 1, 0, -0.47605395, 0, 0.879416, 23.001974, 2.0128746, 13.872829)
@@ -4384,9 +4587,41 @@ nombre_animacion = "Take 001"
 transform = Transform3D(0.9994844, 0, -0.032108396, 0, 1, 0, 0.032108396, 0, 0.9994844, -0.17916489, -0.70092773, -0.0030269623)
 shape = SubResource("BoxShape3D_874c7")
 
-[node name="wolf" parent="Animals" instance=ExtResource("31_p5kob")]
+[node name="wolf" parent="Animals" node_paths=PackedStringArray("panel_quiz", "lbl_pregunta", "btn_1", "btn_2", "btn_3", "luz_magica") instance=ExtResource("31_p5kob")]
 transform = Transform3D(-0.00081396976, 0.061999913, 0.49614048, 0.000101717116, 0.4961411, -0.06199982, -0.49999937, 0, -0.00082030066, 1.1469676, 0.31379104, 23.814087)
 visible = false
+script = ExtResource("28_p5kob")
+frase_desafio = "La herencia del tesoro"
+pregunta = "¿Por qué se considera importante el tesoro perdido de Atahualpa?"
+opcion_1 = "Porque se cree que contiene joyas mágicas"
+opcion_2 = "Porque podría dar gran riqueza a quien lo encuentre"
+opcion_3 = "Porque representa la resistencia y cultura del Imperio Inca"
+correcta = 3
+panel_quiz = NodePath("../../CapaQuiz/Panel")
+lbl_pregunta = NodePath("../../CapaQuiz/Panel/TextoPregunta")
+btn_1 = NodePath("../../CapaQuiz/Panel/Boton1")
+btn_2 = NodePath("../../CapaQuiz/Panel/Boton2")
+btn_3 = NodePath("../../CapaQuiz/Panel/Boton3")
+luz_magica = NodePath("LuzMagica")
+
+[node name="AreaCharla" type="Area3D" parent="Animals/wolf"]
+transform = Transform3D(0.99999994, 0, -1.1641532e-10, 0, 1, 0, -1.1641532e-10, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Animals/wolf/AreaCharla"]
+shape = SubResource("SphereShape3D_pc7vl")
+
+[node name="Label3D" type="Label3D" parent="Animals/wolf"]
+transform = Transform3D(0.99999964, 0, -8.987263e-08, 1.4551915e-11, 1, 0, 8.917414e-08, 0, 0.9999999, 0.27495575, 2.047168, 1.2784684)
+visible = false
+pixel_size = 0.004
+billboard = 1
+text = "Hola"
+outline_size = 6
+
+[node name="LuzMagica" type="OmniLight3D" parent="Animals/wolf"]
+light_color = Color(0.87058824, 0, 0.09411765, 1)
+shadow_enabled = true
+omni_range = 1.0421989
 
 [node name="ZonaWolf" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.879416, 0, 0.47605395, 0, 1, 0, -0.47605395, 0, 0.879416, 5.1046224, 2.0128746, 23.421097)

@@ -1,22 +1,18 @@
 extends Control
 
 # --- REFERENCIAS ---
-# Solo necesitamos el botón de salir
-# (Ajusta la ruta si tu botón no está dentro de VBoxContainer)
 @onready var boton_salir = $VBoxContainer/BotonSalir
 
+# --- NUEVA VARIABLE: MEMORIA DEL RATÓN ---
+# Aquí guardaremos si el ratón estaba visible o atrapado antes de pausar
+var modo_raton_anterior = Input.MOUSE_MODE_CAPTURED
+
 func _ready() -> void:
-	# Ocultar menú al inicio
 	visible = false
-	
-	# Conectar solo el botón de salir
 	if boton_salir:
 		boton_salir.pressed.connect(_on_boton_salir_pressed)
-	else:
-		print("ERROR: No encuentro el BotonSalir.")
 
 func _input(event: InputEvent) -> void:
-	# Detectamos tecla ESC (ui_cancel) para abrir/cerrar el menú
 	if event.is_action_pressed("ui_cancel"):
 		cambiar_pausa()
 
@@ -28,16 +24,21 @@ func cambiar_pausa():
 	# 2. Mostrar/Ocultar menú visual
 	visible = nuevo_estado
 	
-	# 3. Manejo del Ratón
+	# 3. MANEJO INTELIGENTE DEL RATÓN
 	if nuevo_estado:
-		# PAUSA: Mostrar ratón para poder clicar en Salir
+		# --- ESTAMOS PAUSANDO ---
+		# A. Antes de nada, GUARDAMOS cómo estaba el ratón (¿Visible por el quiz o Atrapado jugando?)
+		modo_raton_anterior = Input.get_mouse_mode()
+		
+		# B. Ahora sí, lo hacemos visible para usar el menú de pausa
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		
 	else:
-		# JUEGO: Atrapamos el ratón para mover la cámara
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-# --- FUNCIONES DE BOTONES ---
+		# --- ESTAMOS QUITANDO LA PAUSA ---
+		# Restauramos el ratón a como estaba antes de pausar.
+		# Si estabas en el Quiz, se pondrá VISIBLE.
+		# Si estabas corriendo, se pondrá CAPTURED.
+		Input.mouse_mode = modo_raton_anterior
 
 func _on_boton_salir_pressed() -> void:
-	# Cerrar el juego
 	get_tree().quit()

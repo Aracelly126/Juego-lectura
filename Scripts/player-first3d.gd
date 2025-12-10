@@ -30,13 +30,11 @@ func _ready():
 	pos_inicial_camara = camara.position
 
 
-# --- RECUPERA EL MOUSE SI SE LIBERA (por Alt+Tab, etc.) ---
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		# Si el jugador hace clic y el mouse no está capturado, capturarlo otra vez
+	# SOLO capturamos el mouse si el jugador está en modo de movimiento
+	if puede_moverse and event is InputEventMouseButton and event.pressed:
 		if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 # --- MOVER CÁMARA CON MOUSE (solo si puede moverse) ---
 func _unhandled_input(event):
@@ -46,11 +44,15 @@ func _unhandled_input(event):
 		camara.rotation.x = clamp(camara.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 
-# --- BLOQUEAR / DESBLOQUEAR MOVIMIENTO (usado por el libro) ---
 func cambiar_estado_movimiento(activo: bool):
 	puede_moverse = activo
 	if not activo:
+		# Si NO puede moverse (está leyendo o en quiz), mostramos el mouse
 		velocity = Vector3.ZERO
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		# Si vuelve a moverse, ocultamos el mouse
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 func _physics_process(delta: float) -> void:
@@ -104,3 +106,7 @@ func _headbob(time) -> void:
 	pos.y = sin(time * BOB_FRECUENCIA) * BOB_AMPLITUD
 	pos.x = -cos(time * BOB_FRECUENCIA / 2) * BOB_AMPLITUD
 	camara.position = pos_inicial_camara + pos
+
+
+func _on_area_charla_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.

@@ -1,6 +1,6 @@
 extends Node3D
 
-# --- CONFIGURACIÓN DE CONTENIDO (Editable en el Inspector) ---
+# --- CONFIGURACIÓN DE CONTENIDO ---
 @export_category("Contenido del Libro")
 
 @export_group("Página Izquierda")
@@ -13,34 +13,30 @@ extends Node3D
 @export_multiline var der_texto: String = "Texto de la página derecha..."
 @export var der_textura: Texture2D
 
-# --- NUEVO: DESBLOQUEO DE EVENTOS ---
+# --- DESBLOQUEO DE EVENTOS ---
 @export_group("Eventos de Juego")
-@export var zona_a_desbloquear: Area3D # Arrastra aquí la Zona (ej: ZonaZorro) que este libro activa
+@export var zona_a_desbloquear: Area3D # Arrastra aquí la Zona (ej: ZonaZorro)
 
-# --- CONFIGURACIÓN VISUAL ---
+# --- APARIENCIA ---
 @export_group("Apariencia")
 @export var color_del_brillo: Color = Color(1, 0.8, 0.2) 
 
-# --- REFERENCIAS DE ESCENA ---
+# --- REFERENCIAS (ARRASTRAR DESDE TU ESCENA) ---
 @onready var animation_player = $AnimationPlayer 
 @onready var area_detectora = $Area3D
 @onready var mensaje_flotante = $Label3D 
 @onready var luz_brillo = $OmniLight3D
 
-# --- REFERENCIAS A LA INTERFAZ 2D (LECTURA) ---
+# Referencias UI 2D (LECTURA)
 @onready var capa_lectura = $CanvasLayer
-# Referencias de Texto
 @onready var label_izquierda = $CanvasLayer/Control/TextoIzquierda
 @onready var label_derecha = $CanvasLayer/Control/TextoDerecha
-# Referencias de Imagen
 @onready var img_izquierda = $CanvasLayer/Control/ImagenIzquierda
 @onready var img_derecha = $CanvasLayer/Control/ImagenDerecha
 
-# --- CONFIGURACIÓN DE POSICIÓN ---
+# --- VARIABLES INTERNAS ---
 var posicion_lectura = Vector3(-0.4, -0.2, -0.5) 
 var rotacion_lectura = Vector3(0, 0, -135)
-
-# --- VARIABLES INTERNAS ---
 var jugador_cerca = false
 var libro_abierto = false
 var nombre_animacion = "Animation" 
@@ -54,25 +50,19 @@ func _ready():
 	pos_original_mesa = global_position
 	rot_original_mesa = global_transform.basis.get_rotation_quaternion()
 	
-	# Ocultar interfaces iniciales
 	if mensaje_flotante: mensaje_flotante.visible = false
 	if capa_lectura: capa_lectura.visible = false 
 	
-	# --- CONFIGURAR EL CONTENIDO DE LAS PÁGINAS ---
 	actualizar_paginas()
 	
-	# Aplicar color de luz
-	if luz_brillo:
-		luz_brillo.light_color = color_del_brillo
+	if luz_brillo: luz_brillo.light_color = color_del_brillo
 	
-	# Conectar señales
 	if area_detectora:
 		area_detectora.body_entered.connect(_on_body_entered)
 		area_detectora.body_exited.connect(_on_body_exited)
 
-# Función para manejar qué se muestra (Texto o Imagen)
 func actualizar_paginas():
-	# --- LÓGICA IZQUIERDA ---
+	# Izquierda
 	if izq_usar_imagen:
 		if label_izquierda: label_izquierda.visible = false
 		if img_izquierda:
@@ -84,7 +74,7 @@ func actualizar_paginas():
 			label_izquierda.visible = true
 			label_izquierda.text = izq_texto
 
-	# --- LÓGICA DERECHA ---
+	# Derecha
 	if der_usar_imagen:
 		if label_derecha: label_derecha.visible = false
 		if img_derecha:
@@ -97,14 +87,11 @@ func actualizar_paginas():
 			label_derecha.text = der_texto
 
 func _process(delta):
-	# 1. MOVIMIENTO (Si está abierto)
 	if libro_abierto and camara_jugador:
 		var destino = camara_jugador.to_global(posicion_lectura)
 		global_position = global_position.lerp(destino, 15 * delta)
-		
 		global_rotation = camara_jugador.global_rotation
 		
-		# Correcciones del modelo
 		rotate_object_local(Vector3.UP, deg_to_rad(90)) 
 		rotate_object_local(Vector3.LEFT, deg_to_rad(270))
 		rotate_object_local(Vector3.FORWARD, deg_to_rad(90))
@@ -114,7 +101,6 @@ func _process(delta):
 			rotate_object_local(Vector3.UP, deg_to_rad(rotacion_lectura.y))
 			rotate_object_local(Vector3.FORWARD, deg_to_rad(rotacion_lectura.z))
 	
-	# 2. BRILLO PULSANTE (Si está cerrado)
 	elif luz_brillo:
 		tiempo_brillo += delta * 2.0
 		luz_brillo.light_energy = 2.0 + sin(tiempo_brillo) * 1.0
@@ -130,15 +116,16 @@ func abrir_libro():
 	if jugador_ref:
 		libro_abierto = true
 		
-		# --- NUEVO: ACTIVAMOS LA ZONA DEL ANIMAL ---
+		# --- DESBLOQUEO DEL ANIMAL ---
 		if zona_a_desbloquear:
 			zona_a_desbloquear.monitoring = true
-			print("¡Zona desbloqueada! El animal aparecerá si vas hacia allá.")
+			print("¡Zona desbloqueada! Busca al animal.")
 		
-		# Apagamos la luz al leer
 		if luz_brillo: luz_brillo.visible = false
 		
 		if jugador_ref.has_method("cambiar_estado_movimiento"):
+			# Aquí usamos FALSE para bloquear movimiento, pero EL LIBRO gestiona su propia UI de lectura
+			# NO muestra el mouse necesariamente si usas teclas, pero si quieres leer con mouse, añade la linea del mouse aqui
 			jugador_ref.cambiar_estado_movimiento(false)
 		
 		camara_jugador = get_viewport().get_camera_3d()
@@ -154,7 +141,6 @@ func cerrar_libro():
 	libro_abierto = false
 	if capa_lectura: capa_lectura.visible = false
 	
-	# Encendemos la luz de nuevo
 	if luz_brillo: luz_brillo.visible = true
 	
 	if jugador_ref and jugador_ref.has_method("cambiar_estado_movimiento"):
