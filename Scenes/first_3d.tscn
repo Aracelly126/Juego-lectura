@@ -4288,15 +4288,16 @@ Pista: Seguir el patrón de piedras con marcas o símbolos, la siguiente piedra 
 der_usar_imagen = true
 der_textura = ExtResource("23_fj2lo")
 
-[node name="book2" parent="Books" instance=ExtResource("30_wdyji")]
+[node name="book2" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.06901457, 0.02849301, 0.007080617, -0.0010560467, 0.020485085, -0.07214043, -0.029340617, 0.06628354, 0.01925146, 66.70986, 1.2523979, 11.375157)
 izq_texto = "Hace siglos, los pobladores del páramo conocían rutas ocultas que atravesaban quebradas y rocas gigantes. Estos caminos eran vitales para proteger los secretos del Inca y sus tesoros. 
 
 Cada piedra podía advertir del peligro o señalar la dirección correcta, y algunos incluso estaban marcadas con símbolos que representaban objetos sagrados o el sol y la luna."
 der_texto = "Las leyendas cuentan que los mensajeros del Inca recorrían estos caminos para llevar información importante sin ser detectados. Ahora, José, tu misión es similar: debes interpretar las señales de las piedras y el musgo para avanzar, aprendiendo la historia mientras descubres cada pista"
+zona_a_desbloquear = NodePath("../../Animals/ZonaZorro")
 color_del_brillo = Color(0.0030078832, 3.9467217e-05, 0.89840245, 1)
 
-[node name="book3" parent="Books" instance=ExtResource("30_wdyji")]
+[node name="book3" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.067443, 0.021225147, 0.025018683, 0.011205848, 0.03885027, -0.063167065, -0.030836185, 0.060540445, 0.03176445, 47.0324, 0.9684355, 3.0044258)
 izq_texto = "Se dice que el tesoro de Atahualpa no solo contenía oro y plata, sino también objetos de valor espiritual, como símbolos de poder y piezas de la cultura inca. Antes de ser apresado, Atahualpa habría ordenado esconderlo en un lugar protegido por la naturaleza.
 Los relatos cuentan que los objetos estaban agrupados de manera simbólica, representando mensajes, tradiciones y consejos para el futuro.
@@ -4304,17 +4305,19 @@ Observa las piedras a tu alrededor: algunas imitan la forma de estos objetos y t
 der_usar_imagen = true
 der_texto = ""
 der_textura = ExtResource("24_g752b")
+zona_a_desbloquear = NodePath("../../Animals/ZonaAlpaca")
 color_del_brillo = Color(0.9014576, 0, 0.099874236, 1)
 
-[node name="book4" parent="Books" instance=ExtResource("30_wdyji")]
+[node name="book4" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(-0.073050335, 0.0024393818, -0.016813543, 0.014159284, 0.049761083, -0.054298647, 0.009389397, -0.05606141, -0.048928067, 29.490019, 0.19672304, 13.458467)
 izq_usar_imagen = true
 izq_texto = ""
 izq_textura = ExtResource("25_xb5ib")
 der_texto = "En los páramos, la naturaleza es un lenguaje antiguo. Las piedras, el musgo y su disposición guardan secretos que han pasado de generación en generación.
 Los antiguos confiaban en estas señales para proteger su cultura y los tesoros del Inca. Algunas piedras parecen alinearse de forma especial y el musgo crece más denso en ciertos lugares. Cada detalle puede revelar un mensaje o una dirección"
+zona_a_desbloquear = NodePath("../../Animals/ZonaSapo")
 
-[node name="book5" parent="Books" instance=ExtResource("30_wdyji")]
+[node name="book5" parent="Books" node_paths=PackedStringArray("zona_a_desbloquear") instance=ExtResource("30_wdyji")]
 transform = Transform3D(0.043297958, 0.052962754, 0.030744659, 0.009604562, 0.03131404, -0.06746981, -0.06048172, 0.04288793, 0.0112953605, 5.2437205, 0.81688535, 20.829332)
 izq_texto = "Has llegado al final, José. Aquí, la observación y la historia se unen. Los antiguos dejaron acertijos entre las piedras:
 ✔ Una piedra más alta que las demás marca el paso correcto.
@@ -4323,6 +4326,7 @@ izq_texto = "Has llegado al final, José. Aquí, la observación y la historia s
 El tesoro te espera, pero recuerda: la verdadera riqueza es el conocimiento que has reunido en el camino."
 der_usar_imagen = true
 der_textura = ExtResource("24_qi1nd")
+zona_a_desbloquear = NodePath("../../Animals/ZonaWolf")
 color_del_brillo = Color(0.8696285, 0, 0.09471998, 1)
 
 [node name="Animals" type="Node3D" parent="."]
@@ -4338,6 +4342,7 @@ libraries = {
 
 [node name="ZonaZorro" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.8729306, 0, -0.48784444, 0, 1, 0, 0.48784444, 0, 0.8729306, 62.96426, 2.0128746, 12.163083)
+monitoring = false
 script = ExtResource("28_yxbvs")
 zorro_modelo = NodePath("../zorro")
 animador_zorro = NodePath("../zorro/AnimationPlayer")
@@ -4353,6 +4358,7 @@ visible = false
 
 [node name="ZonaAlpaca" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.9996929, 0, -0.024781182, 0, 1, 0, 0.024781182, 0, 0.9996929, 43.821075, 2.0128746, 4.4045033)
+monitoring = false
 script = ExtResource("28_yxbvs")
 zorro_modelo = NodePath("../alpaca")
 animador_zorro = NodePath("../alpaca/AnimationPlayer")
@@ -4368,6 +4374,7 @@ visible = false
 
 [node name="ZonaSapo" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.879416, 0, 0.47605395, 0, 1, 0, -0.47605395, 0, 0.879416, 23.001974, 2.0128746, 13.872829)
+monitoring = false
 script = ExtResource("28_yxbvs")
 zorro_modelo = NodePath("../sapo")
 animador_zorro = NodePath("../sapo/AnimationPlayer")
@@ -4383,6 +4390,7 @@ visible = false
 
 [node name="ZonaWolf" type="Area3D" parent="Animals" node_paths=PackedStringArray("zorro_modelo", "animador_zorro")]
 transform = Transform3D(0.879416, 0, 0.47605395, 0, 1, 0, -0.47605395, 0, 0.879416, 5.1046224, 2.0128746, 23.421097)
+monitoring = false
 script = ExtResource("28_yxbvs")
 zorro_modelo = NodePath("../wolf")
 animador_zorro = NodePath("../wolf/AnimationPlayer")

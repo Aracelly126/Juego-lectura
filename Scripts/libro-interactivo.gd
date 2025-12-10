@@ -13,6 +13,10 @@ extends Node3D
 @export_multiline var der_texto: String = "Texto de la página derecha..."
 @export var der_textura: Texture2D
 
+# --- NUEVO: DESBLOQUEO DE EVENTOS ---
+@export_group("Eventos de Juego")
+@export var zona_a_desbloquear: Area3D # Arrastra aquí la Zona (ej: ZonaZorro) que este libro activa
+
 # --- CONFIGURACIÓN VISUAL ---
 @export_group("Apariencia")
 @export var color_del_brillo: Color = Color(1, 0.8, 0.2) 
@@ -28,7 +32,7 @@ extends Node3D
 # Referencias de Texto
 @onready var label_izquierda = $CanvasLayer/Control/TextoIzquierda
 @onready var label_derecha = $CanvasLayer/Control/TextoDerecha
-# Referencias de Imagen (¡Nuevas!)
+# Referencias de Imagen
 @onready var img_izquierda = $CanvasLayer/Control/ImagenIzquierda
 @onready var img_derecha = $CanvasLayer/Control/ImagenDerecha
 
@@ -66,7 +70,7 @@ func _ready():
 		area_detectora.body_entered.connect(_on_body_entered)
 		area_detectora.body_exited.connect(_on_body_exited)
 
-# Función nueva para manejar qué se muestra
+# Función para manejar qué se muestra (Texto o Imagen)
 func actualizar_paginas():
 	# --- LÓGICA IZQUIERDA ---
 	if izq_usar_imagen:
@@ -125,6 +129,11 @@ func _input(event):
 func abrir_libro():
 	if jugador_ref:
 		libro_abierto = true
+		
+		# --- NUEVO: ACTIVAMOS LA ZONA DEL ANIMAL ---
+		if zona_a_desbloquear:
+			zona_a_desbloquear.monitoring = true
+			print("¡Zona desbloqueada! El animal aparecerá si vas hacia allá.")
 		
 		# Apagamos la luz al leer
 		if luz_brillo: luz_brillo.visible = false
