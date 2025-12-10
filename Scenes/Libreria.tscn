@@ -371,7 +371,7 @@ light_size = 0.018
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_0ncc4")
-volume_db = -29.769
+volume_db = -3.0
 autoplay = true
 parameters/looping = true
 

@@ -4640,7 +4640,7 @@ shape = SubResource("BoxShape3D_874c7")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("29_wdyji")
-volume_db = -30.0
+volume_db = -5.0
 autoplay = true
 parameters/looping = true
 
