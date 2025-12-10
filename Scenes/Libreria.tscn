@@ -365,6 +365,10 @@ font_size = 50
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00030517578, 0.928524)
 shape = SubResource("SphereShape3D_p16hr")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="book1"]
+transform = Transform3D(5, 2.842171e-14, 0, -2.842171e-14, 5, 0, 0, 0, 5, -0.4377613, 0, 0.7839203)
+light_size = 0.018
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_0ncc4")
 volume_db = -29.769
