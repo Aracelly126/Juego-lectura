@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cx0o7yvjqgpd3"]
+[gd_scene load_steps=26 format=4 uid="uid://cx0o7yvjqgpd3"]
 
 [ext_resource type="PackedScene" uid="uid://cul825lramx12" path="res://Scenes/menu_pausa.tscn" id="1_2igrk"]
 [ext_resource type="PackedScene" uid="uid://ckk5gw4ju2p0l" path="res://Resources/Libreria/free_-_skybox_sunroof_in_the_city.glb" id="1_ayyl2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dcxw0807usu53" path="res://Scenes/introduccion.tscn" id="7_78osf"]
 [ext_resource type="Texture2D" uid="uid://bk22dvy6i8gpp" path="res://Resources/Libreria/old_book_0.jpg" id="8_50ohf"]
 [ext_resource type="Texture2D" uid="uid://du0w5hpk4umkw" path="res://Resources/Libreria/old_book_1.png" id="9_cwyk7"]
+[ext_resource type="AudioStream" uid="uid://cmv0w2vt21qq0" path="res://Resources/music/ciudad-ambiente.mp3" id="10_0ncc4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3p4um"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -363,5 +364,11 @@ font_size = 50
 [node name="CollisionShape3D" type="CollisionShape3D" parent="book1/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00030517578, 0.928524)
 shape = SubResource("SphereShape3D_p16hr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_0ncc4")
+volume_db = -29.769
+autoplay = true
+parameters/looping = true
 
 [editable path="Aula"]

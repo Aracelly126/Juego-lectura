@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://ulbcxmat2uc8"]
+[gd_scene load_steps=73 format=4 uid="uid://ulbcxmat2uc8"]
 
 [ext_resource type="PackedScene" uid="uid://cul825lramx12" path="res://Scenes/menu_pausa.tscn" id="1_kte3u"]
 [ext_resource type="Script" uid="uid://dgpeurgi64np0" path="res://Scripts/player-first3d.gd" id="1_qkeoe"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://mg03pa3o21qs" path="res://Scripts/pared_zorro.gd" id="28_yxbvs"]
 [ext_resource type="PackedScene" uid="uid://c2dk5lvwp5qjp" path="res://Scenes/Animals/alpaca.tscn" id="29_874c7"]
 [ext_resource type="PackedScene" uid="uid://j18mdj73sb1l" path="res://Resources/first_3d/Rocks/Rock Path Round Wide.glb" id="29_gu6fl"]
+[ext_resource type="AudioStream" uid="uid://crv55pigsk0ew" path="res://Resources/music/first_3d-sonido.mp3" id="29_wdyji"]
 [ext_resource type="PackedScene" uid="uid://clqvgmwqw7qdm" path="res://Scenes/Animals/sapo.tscn" id="30_pc7vl"]
 [ext_resource type="PackedScene" uid="uid://c07iwlv0ueaku" path="res://Scenes/first_3d/LibroInteractivo.tscn" id="30_wdyji"]
 [ext_resource type="PackedScene" uid="uid://bw4smywyjgtnj" path="res://Scenes/Animals/wolf.tscn" id="31_p5kob"]
@@ -4634,6 +4635,12 @@ nombre_animacion = "Animation"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Animals/ZonaWolf"]
 transform = Transform3D(0.9994844, 0, -0.032108396, 0, 1, 0, 0.032108396, 0, 0.9994844, -0.17916489, -0.70092773, -0.0030269623)
 shape = SubResource("BoxShape3D_874c7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_wdyji")
+volume_db = -30.0
+autoplay = true
+parameters/looping = true
 
 [editable path="Clouds/Cloud1"]
 [editable path="Clouds/Cloud2"]

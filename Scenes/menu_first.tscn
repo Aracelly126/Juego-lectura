@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cafaqy8ce2rla"]
+[gd_scene load_steps=5 format=3 uid="uid://cafaqy8ce2rla"]
 
 [ext_resource type="Texture2D" uid="uid://6pfx5l4b01k0" path="res://Resources/Menu/FondoInicioTitulo.png" id="1_fgp8h"]
 [ext_resource type="Script" uid="uid://bcm3el6222wnd" path="res://Scripts/menu_first.gd" id="1_kn2jb"]
 [ext_resource type="Texture2D" uid="uid://pokrb4k734td" path="res://Resources/Menu/BotonPlay.png" id="2_eq4t5"]
+[ext_resource type="AudioStream" uid="uid://b0df5xwusg0in" path="res://Resources/music/primera-musica.mp3" id="4_yj5px"]
 
 [node name="Menu-first" type="Control"]
 layout_mode = 3
@@ -25,5 +26,11 @@ offset_bottom = 562.0
 texture_normal = ExtResource("2_eq4t5")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yj5px")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="button_play" to="." method="_on_button_play_pressed"]
